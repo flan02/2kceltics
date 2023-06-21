@@ -76,10 +76,9 @@ function get($controller, $action, $third_param = null)
 }
 
 
-function root($path, $arch)          // lo hacemos con imagenes pero puede servir para audios, videos, etc
-{
+function root($path, $arch){          // lo hacemos con imagenes pero puede servir para audios, videos, etc
     $version2k = get_version();
-//  root("admin/img/",
+    //  root("admin/img/",
     $env = $_SERVER["REMOTE_ADDR"];
     $local = '127.0.0.1';
 

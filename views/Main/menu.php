@@ -146,7 +146,7 @@ if($playoffs == "false"){
 
 <?php } else { ?>
 
-<main>
+<main id="main">
     <article class="ma--title ma--container">
         <?php if($playoffs == "false"){ ?>
             <h1> SCHEDULE 2K SEASON </h1> 

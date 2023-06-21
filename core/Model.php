@@ -13,7 +13,7 @@ class Model
         }
         catch(PDOException $e)
         {
-            die("No se puede conectar a la BBDD por error: " . $e->getMessage());
+            die("You got the next error: " . $e->getMessage());
         }
     }
 
