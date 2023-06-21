@@ -1,0 +1,26 @@
+{
+    "game1": {
+      "link": "https://www.youtube.com/embed/Bi-WIhblZE0",
+      "BOS": "114",
+      "PHI": "115",
+      "res": "L"
+    },
+    "game2": {
+      "link": "https://www.youtube.com/embed/iMVrp2Yz7Hc",
+      "BOS": "105",
+      "MIA": "101",
+      "res": "L"
+    },
+    "game3": {
+      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
+      "BOS": "128",
+      "ORL": "118",
+      "res": "L"
+    },
+    "game4": {
+      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
+      "BOS": "128",
+      "CHI": "118",
+      "res": "L"
+    }
+}
