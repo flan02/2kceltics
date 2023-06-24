@@ -4,6 +4,7 @@ if (isset($data["controller"])) {
     $cont = $data["cont"];
     $pag = $data["pag"];
     $current_game = $data["current_game"];
+    $current_game = $current_game -1;
     $win = $data["win"];
     $lose = $data["lose"];
     $ochentaydos = $data["ochentaydos"];
@@ -13,6 +14,7 @@ if (isset($data["controller"])) {
     $playoffs = $data["playoffs"];
     $porival = $data["porival"];  
     $gamename = $data["gamename"];
+    
     $playoffs_root = $data["playoffs_root"];
 
     for ($p = 0; $p < count($path_2k); $p++) :
@@ -154,10 +156,29 @@ if($playoffs == "false"){
             <h1> 2K PLAYOFFS </h1>
             <?php } ?>
     </article>
-
+    
+<!-- 
     <div class="maxwidth ma--div__pstats">
-        <img class="img--pstats" src="<?php echo $img_2k[0]; ?>" alt="player stats">
+        <img class="img--pstats" src="<?php // echo $img_2k[0]; ?>" alt="player stats">
     </div>
+-->
+    <article class="ma--nextGame">
+            <div class="ma--nextGame__title">
+                <h3>NEXT GAME</h3>
+            </div>
+            <div class="ma--nextGame__logos">
+                <?php echo $local; ?>
+                <span>VS</span>
+                <?php echo $visita[$current_game]; ?>
+                
+            </div>
+            <div class="ma--nextGame__links">
+                <a href="http://">player stats</a>
+                <a href="http://">standings</a>
+                <a href="http://">team record</a>
+            </div>
+        
+    </article>
     <div class="ma--container">
     <?php if($playoffs == "false"){ ?>
         <div class="ma--grid">        
@@ -181,8 +202,8 @@ if($playoffs == "false"){
                     for ($i; $i < $j; $i++) :
                         if ($localia[$i] == "l") {
                     ?>
-                <article class=" ma--griditem">
-                    <p class="ma--p__games  <?php if ($i < $current_game)   echo 'played'; ?>">
+                <article class=" ma--griditem <?php if ($i < $current_game) echo 'played'; /* ACA HACER QUE EL LOGO QUEDE OFUSCADO LUEGO DE JUGAR EL PARTIDO*/ ?>">
+                    <p class="ma--p__games notplayed <?php if ($i < $current_game) echo 'played'; ?>">
                         <?php echo $visita[$i] . " " . " " . $ochentaydos[$i] . " " . "vs" . " " . "bos" . " " . " " . $local; ?>
                     </p>
 
