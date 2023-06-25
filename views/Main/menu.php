@@ -6,7 +6,9 @@ if (isset($data["controller"])) {
     $current_game = $data["current_game"];
     $current_game = $current_game -1;
     $win = $data["win"];
+    $win = count($win);
     $lose = $data["lose"];
+    $lose = count($lose);
     $ochentaydos = $data["ochentaydos"];
     $localia = $data["localia"];
     $root_logo = $data["root_logo"];
@@ -164,7 +166,8 @@ if($playoffs == "false"){
 -->
     <article class="ma--nextGame">
             <div class="ma--nextGame__title">
-                <h3>NEXT GAME</h3>
+            <div id="twitch"></div>
+                <h3>NEXT GAME #<?php echo $next_game; ?></h3>
             </div>
             <div class="ma--nextGame__logos">
                 <?php echo $local; ?>
@@ -176,27 +179,28 @@ if($playoffs == "false"){
                 <a href="http://">player stats</a>
                 <a href="http://">standings</a>
                 <a href="http://">team record</a>
+                
             </div>
-        
+            
     </article>
     <div class="ma--container">
     <?php if($playoffs == "false"){ ?>
         <div class="ma--grid">        
             <div class="ma--schedule__col20">
                 <?php
-                    if ($pag === 1) {
+                    if ($pag === 2) { // switch 1
                         $i = 40;
                         $j = 60;
                         $z = 60;
                         $k = 82;
-                        $pag2 = 2;
+                        $pag2 = 1; // switch 2
                     } else {
                         $i = 0;
                         $j = 20;
                         $z = 20;
                         $k = 40;
-                        $pag = 1;
-                        $pag2 = 2;
+                        $pag = 2; // switch 1
+                        $pag2 = 1; // switch 2
                     }
 
                     for ($i; $i < $j; $i++) :
@@ -244,30 +248,23 @@ if($playoffs == "false"){
                     <img class="ma--img__playoffs" src="<?php echo $playoffs_root; ?>" alt="playoffs-picture">
                 </article>
     <?php } ?>
-            <section>
-                <div class="ma--section__news">
-                    <h2>NEXT GAME</h2>
-                    <?php if($playoffs == "false"){?>
-                    <p><?php echo "game #$next_game: " . "bos vs " . $ochentaydos[$current_game]; ?>
-                    <?php }else{ ?>
-                     <p><?php echo "game #R4G5: " . "bos vs " . $porival; ?> 
-                    <?php } ?>    
-                    <br>
-                    <figure class=""></figure>
-                    <br>
-
+            
+                <div class="ma--section__news">  
+                    <h2>RECORD</h2>
+                    <p class="ma--record"><?php echo "$win W - $lose L"; ?></p>
+                    <br><br><br><br><br><br><br><br><br><br>
                     <span class="fake--background">
                         <p class="ma--contador"><span>visitors counter</span></p>
                     </span>
                     <span class="fake--background">
                         <p class="ma--contador"><span><?php echo $cont; ?></span></p>
                     </span>
-                    <p class="ma--record"><?php echo "$win W - $lose L"; ?></p>
+                    
 
                 </div>
-                <img class="trecord" src="<?php echo $img_2k[1]; ?>" alt="team record">
-                <img class="standings" src="<?php echo $img_2k[2]; ?>" alt="standings">
-
+            <!--    <img class="trecord" src="<?php // echo $img_2k[1]; ?>" alt="team record">
+                <img class="standings" src="<?php // echo $img_2k[2]; ?>" alt="standings">
+            -->
             </section>
         </div>
 
@@ -279,5 +276,20 @@ if($playoffs == "false"){
         <a class="ma--pag__a" href="<?php echo $root . '/' . $pag2; ?>">41-82</a>
     </div>
     <?php endif; ?>
+    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+
+    <script type="text/javascript">
+        var options = {
+        width: 400,
+        height: 400,
+        channel: "flano2",
+        video: "",
+        collection: "",
+        // only needed if your site is also embedded on embed.example.com and othersite.example.com
+        /*parent: ["http://127.0.0.1", "https://www.2kceltics.xyz"] */
+    };
+    var player = new Twitch.Player("twitch", options);
+    player.setVolume(0.5);
+</script>
 </main>
 <?php } ?>
