@@ -3,8 +3,8 @@
     <h5>2kceltics 2022-2023</h5>
 </section>
 
-
-<?php } else {?>
+<?php
+} else {?>
 
 <footer>
     <div class="fo--container">

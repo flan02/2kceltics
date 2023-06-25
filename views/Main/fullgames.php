@@ -165,29 +165,10 @@ if($playoffs == "true"){
     <article class="ma--title ma--container">
         <h1> FULL GAMES </h1>
     </article>
-
-    <div class="ma--container__std">
-        <h2 class="ma--subtitle">WATCH LAST 5 GAMES</h2>
-        <section class="ma--choosegame">
-            <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box1; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box2. $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box2; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box3 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box3; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box4; ?></span></a>
-        </section>
-
-        <section class="ma--media">            
-            <?php if ($nrogame != " ") { ?>
+    <h2 class="ma--subtitle">WATCH LAST 5 GAMES</h2>
+    <div class="ma--container__std" id="mainFullgames">
+        <section class="ma--playYoutube">
+        <?php if ($nrogame != " ") { ?>
             <iframe class="ma--iframe" id="display"
                 src="<?php echo $season82[$adjust_game]; ?>?controls=2&showinfo=1&modestbranding=1&rel=0&theme=light&showsearch=0"
                 title="YouTube video player" frameborder="0"
@@ -228,6 +209,24 @@ if($playoffs == "true"){
 
             </section>
         </section>
+        <aside class="ma--selectYoutube">
+                <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
+                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+                    <span class="ma--game__span"><?php echo "game " . "#" . $box; ?></span></a>
+                <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
+                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+                    <span class="ma--game__span"><?php echo "game " . "#" . $box1; ?></span></a>
+                <a class="ma--game" href="<?php echo $root . "/" . $box2. $ancla; ?>">
+                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+                    <span class="ma--game__span"><?php echo "game " . "#" . $box2; ?></span></a>
+                <a class="ma--game" href="<?php echo $root . "/" . $box3 . $ancla; ?>">
+                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+                    <span class="ma--game__span"><?php echo "game " . "#" . $box3; ?></span></a>
+                <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
+                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+                    <span class="ma--game__span"><?php echo "game " . "#" . $box4; ?></span></a>
+        </aside>
+
     </div>
     <?php
         if ($nrogame !== " ") : ?>

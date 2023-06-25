@@ -10,12 +10,12 @@ class Content extends Controller
         parent::__construct();
     }
 
-    public function fullgames()
+public function fullgames()
     {
-        
+
         $version2k = get_version();
-        $playoffs = get_season();
-        
+        //$playoffs = get_season();
+        $playoffs = true;
         if (isset($_GET["game"])) {
             $game = $_GET["game"];
             /*echo $game;
@@ -101,7 +101,6 @@ class Content extends Controller
         $controller = array("Dashboard", "Content");   // controllador p/ la interfaz
         $_loadViews = new LoadViews("Main/fullgames.php", compact("root_img", "controller", "array_links", "array_bos_points", "array_rival_points", "array_rival_name", "game", "current_game", "r", "f", "css1", "css2", "mobile", "mainmenu", "iconos", "gamename", "playoffs", "playoffs_root"));
     }
-
 
     public function roster()
     {
