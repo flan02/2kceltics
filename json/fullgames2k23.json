@@ -89,34 +89,34 @@
       "CHI": "98",
       "res": "W"
     },
-    "game4": {
-      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
-      "BOS": "128",
-      "CHI": "118",
+    "game16": {
+      "link": "https://www.youtube.com/watch?v=DfBc5yLULGI",
+      "BOS": "90",
+      "NOP": "96",
       "res": "L"
     },
-    "game4": {
-      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
-      "BOS": "128",
-      "CHI": "118",
+    "game17": {
+      "link": "https://www.youtube.com/watch?v=fFK5TeISMyM",
+      "BOS": "102",
+      "CHI": "90",
+      "res": "W"
+    },
+    "game18": {
+      "link": "https://www.youtube.com/watch?v=eoajhlqafmA",
+      "BOS": "95",
+      "DAL": "99",
       "res": "L"
     },
-    "game4": {
-      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
-      "BOS": "128",
-      "CHI": "118",
-      "res": "L"
+    "game19": {
+      "link": "https://www.youtube.com/watch?v=yyftC25wUYE",
+      "BOS": "106",
+      "SAC": "87",
+      "res": "W"
     },
-    "game4": {
-      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
-      "BOS": "128",
-      "CHI": "118",
-      "res": "L"
-    },
-    "game4": {
-      "link": "https://www.youtube.com/embed/tKhIcjIDVS8",
-      "BOS": "128",
-      "CHI": "118",
+    "game20": {
+      "link": "https://www.youtube.com/watch?v=kcPN_CE5aI0",
+      "BOS": "101",
+      "WAS": "109",
       "res": "L"
     },
     "game4": {

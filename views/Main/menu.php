@@ -176,9 +176,9 @@ if($playoffs == "false"){
                 
             </div>
             <div class="ma--nextGame__links">
-                <a href="#" class="panel__btn">player stats</a>
-                <a href="#" class="panel__btn">standings</a>
-                <a href="#" class="panel__btn">team record</a>
+                <a id="pstats" href="#" class="panel__btn">player stats</a>
+                <a id="standings" href="#" class="panel__btn">standings</a>
+                <a id="trecord" href="#" class="panel__btn">team record</a>
             </div>
             
     </article>
@@ -293,8 +293,8 @@ if($playoffs == "false"){
     <?php endif; ?>
 
     <div id="mainmodal">
-        <section class="maxwidth ma--div__pstats" id="boximg">
-            <img class="img--pstats" src="<?php echo $img_2k[0]; ?>" alt="player stats">
+        <section class="maxwidth " >
+            <img id="boximg" class="img--pstats" src="" alt="" >
         </section>
         <div class="modal--quit__cross" >
             <img id="maincross" src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/icons/x-quit-solid.svg" alt="">

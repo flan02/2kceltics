@@ -1,6 +1,6 @@
 <?php if($mobile){ ?>
     <section class="foo">
-    <h5>2kceltics 2021-2022</h5>
+    <h5>2kceltics 2022-2023</h5>
 </section>
 
 
@@ -8,7 +8,7 @@
 
 <footer>
     <div class="fo--container">
-        <span>2Kceltics 2021-2022</span>
+        <span>2Kceltics 2022-2023</span>
     </div>
 </footer>
 <?php } ?>

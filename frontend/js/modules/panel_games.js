@@ -5,7 +5,6 @@ export default function panelGames(id,sel,close,boximg){
     const $mainmodal = d.getElementById(id)
     const $imgbox = d.getElementById(boximg),
           $close = d.getElementById(close);
-    
     let pic
     let rootimg = "http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/games/1/"
     d.addEventListener("click", (e) => {
@@ -16,7 +15,7 @@ export default function panelGames(id,sel,close,boximg){
              c.log(`${pic}`);
              $imgbox.classList.remove("main__modal--imgbig")
              $imgbox.classList.remove("main__modal--imgmid")
-             $imgbox.classList.add("main__modal--img")
+             $imgbox.classList.add("main__modal--imgsm")
              $imgbox.setAttribute("src", rootimg+pic)
              $mainmodal.style.visibility = 'visible';
         break;
