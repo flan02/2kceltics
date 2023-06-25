@@ -79,9 +79,9 @@ if (isset($data)) {
 <body>
     <?php if ($mobile) { ?>
 
-    <header>
+        <header>
         <section class="container">
-            <div class="he--ad">BLACK LIVES MATTER</div>
+            <div class="he--ad">last time to watch Smart #36 wearing green</div>
             <div class="he--menu">
                 <?php if ($mainmenu) { ?>
                 <img class="he--arrow" id="main-menu" src="<?php echo $icon_slide; ?>" alt="menu_icon" /> <?php } ?>
@@ -173,7 +173,7 @@ if (isset($data)) {
     <?php } else { ?>
 
     <header>
-        <div class=" he--ad">BLACK LIVES MATTER</div>
+        <div class=" he--ad">last time to watch Smart #36 wearing green</div>
         <div class="he--container">
             <article class="he--art__big3">
                 <img class="he--img__big3" src="<?php echo $root_img; ?>/big-three-21-22.png" alt="big three" srcset="">

@@ -1,6 +1,7 @@
 const d=document, c=console, w=window, n=navigator
 export default function panelGames(id,sel,close,boximg){
     const $links = d.querySelectorAll(sel)
+    console.log($links)
     const $mainmodal = d.getElementById(id)
     const $imgbox = d.getElementById(boximg),
           $close = d.getElementById(close);
@@ -58,6 +59,7 @@ export default function panelGames(id,sel,close,boximg){
         break;
         case $close: 
             $mainmodal.style.visibility = 'hidden';
+            console.log('ckicked it');
         break;
         }
     });

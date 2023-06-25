@@ -176,10 +176,9 @@ if($playoffs == "false"){
                 
             </div>
             <div class="ma--nextGame__links">
-                <a href="http://">player stats</a>
-                <a href="http://">standings</a>
-                <a href="http://">team record</a>
-                
+                <a href="#" class="panel__btn">player stats</a>
+                <a href="#" class="panel__btn">standings</a>
+                <a href="#" class="panel__btn">team record</a>
             </div>
             
     </article>
@@ -250,9 +249,25 @@ if($playoffs == "false"){
     <?php } ?>
             
                 <div class="ma--section__news">  
-                    <h2>RECORD</h2>
+                    <h2>2K23 RECORD</h2>
                     <p class="ma--record"><?php echo "$win W - $lose L"; ?></p>
-                    <br><br><br><br><br><br><br><br><br><br>
+                    <div class="slider">
+                        <div class="slider-slides">
+                            <div class="slider-slide active">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023a.png" alt="">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023b.png" alt="">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023c.png" alt="">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023d.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><br>
                     <span class="fake--background">
                         <p class="ma--contador"><span>visitors counter</span></p>
                     </span>
@@ -276,6 +291,17 @@ if($playoffs == "false"){
         <a class="ma--pag__a" href="<?php echo $root . '/' . $pag2; ?>">41-82</a>
     </div>
     <?php endif; ?>
+
+    <div id="mainmodal">
+        <section class="maxwidth ma--div__pstats" id="boximg">
+            <img class="img--pstats" src="<?php echo $img_2k[0]; ?>" alt="player stats">
+        </section>
+        <div class="modal--quit__cross" >
+            <img id="maincross" src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/icons/x-quit-solid.svg" alt="">
+        </div>
+    </div>
+
+
     <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
 
     <script type="text/javascript">
