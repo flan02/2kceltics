@@ -3,7 +3,7 @@
       "link": "https://www.youtube.com/embed/Bi-WIhblZE0",
       "BOS": "114",
       "PHI": "115",
-      "res": "L"
+      "res": "W"
     },
     "game2": {
       "link": "https://www.youtube.com/embed/iMVrp2Yz7Hc",
@@ -214,11 +214,5 @@
       "BOS": "98",
       "LAC": "105",
       "res": "L"
-    },
-    "game": {
-      "link": "",
-      "BOS": "",
-      "HOU": "",
-      "res": ""
     }
 }

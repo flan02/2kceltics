@@ -1,12 +1,15 @@
+
 const d=document, c=console, w=window, n=navigator
-export default function panelGames(id,sel,close,boximg){
+
+export default function panelGames(id,sel,close,boximg, currentGame){
     const $links = d.querySelectorAll(sel)
     console.log($links)
     const $mainmodal = d.getElementById(id)
     const $imgbox = d.getElementById(boximg),
           $close = d.getElementById(close);
+    const game = d.getElementById(currentGame).textContent.trim()
     let pic
-    let rootimg = "http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/games/1/"
+    let rootimg = `http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/games/${game}/`
     d.addEventListener("click", (e) => {
         switch(e.target){
         case $links[0]:

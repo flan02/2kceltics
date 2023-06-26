@@ -4,7 +4,7 @@ if (isset($data["controller"])) {
     $cont = $data["cont"];
     $pag = $data["pag"];
     $current_game = $data["current_game"];
-    $current_game = $current_game -2;
+    $current_game = $current_game -1;
     $win = $data["win"];
     $win = count($win);
     $lose = $data["lose"];
@@ -149,7 +149,7 @@ if($playoffs == "false"){
 </main>
 
 <?php } else { ?>
-
+<span id="currentGame"> <?php echo $current_game; ?> </span>
 <main id="main">
     <article class="ma--title ma--container">
         <?php if($playoffs == "false"){ ?>
@@ -158,7 +158,6 @@ if($playoffs == "false"){
             <h1> 2K PLAYOFFS </h1>
             <?php } ?>
     </article>
-    
 <!-- 
     <div class="maxwidth ma--div__pstats">
         <img class="img--pstats" src="<?php // echo $img_2k[0]; ?>" alt="player stats">
@@ -302,10 +301,10 @@ if($playoffs == "false"){
             <img id="maincross" src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/icons/x-quit-solid.svg" alt="">
         </div>
     </div>
-
+    
 
     <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-
+    
     <script type="text/javascript">
         var options = {
         width: 400,

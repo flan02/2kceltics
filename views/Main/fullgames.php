@@ -215,20 +215,20 @@ if($playoffs == "true"){
             </section>
         </section>
         <aside class="ma--selectYoutube">
+                <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
+                <span class="ma--game__span"><?php echo "game " . "#" . $box . ": BOS - " . $rival_name[$box1]; ?></span></a>
+                
                 <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box1 . ": BOS - " . $rival_name[$box2]; ?></span></a>
                 
-                <a class="ma--game" href="<?php echo $root . "/" . $box2 . $ancla; ?>">
+                <a class="ma--game" href="<?php echo $root . "/" . $box2. $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box2 . ": BOS - " . $rival_name[$box3]; ?></span></a>
                 
-                <a class="ma--game" href="<?php echo $root . "/" . $box3. $ancla; ?>">
+                <a class="ma--game" href="<?php echo $root . "/" . $box3 . $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box3 . ": BOS - " . $rival_name[$box4]; ?></span></a>
                 
                 <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box4 . ": BOS - " . $rival_name[$box5]; ?></span></a>
-                
-                <a class="ma--game" href="<?php echo $root . "/" . $box5 . $ancla; ?>">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box5 . ": BOS - " . $rival_name[$box6]; ?></span></a>
         </aside>
 
     </div>
