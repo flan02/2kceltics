@@ -61,16 +61,56 @@ if($playoffs == "false"){
 ?>
 
 <?php if ($mobile) {  ?>
-<main>
-    <div class="container">
-        <h1 class="ma--title">  
-            <?php if($playoffs == "false"){ ?> <h1 class="ma--title">SCHEDULE 2K SEASON </h1> 
+<span id="currentGame"> <?php echo $current_game; ?> </span>
+<main >
+    <div id="mainMobile">
+        <section class="ma--title">  
+            <?php if($playoffs == "false"){ ?> 
+                <h1 class="ma--title">SCHEDULE 2K SEASON </h1> 
             <?php } else { ?>
                 <h1 class="ma--title"> 2K PLAYOFFS </h1>
             <?php } ?>
-            <div class="maxwidth ma--div__pstats">
-                <img class="img--pstats" src="<?php echo $img_2k[0]; ?>" alt="player stats">
-            </div>
+        </section>
+        
+        <article class="ma--flexMobile">
+                <section class="ma--nextGame">
+                    <div>
+                        <h3> NEXT GAME #<?php echo $next_game; ?></h3>
+                    </div>
+                    <div class="ma--nextGame__logos">
+                        <span><?php echo $local; ?></span>
+                        <span>VS</span>
+                        <span><?php echo $visita[$current_game]; ?></span>
+                    </div>
+                    <div class="ma--nextGame__links">
+                        <a id="pstats" href="#" class="panel__btn">Pstats</a>
+                        <a id="standings" href="#" class="panel__btn">Standings</a>
+                        <a id="trecord" href="#" class="panel__btn">Record</a>
+                    </div>
+                </section>
+                <aside class="ma--aside">
+                    <div class="aside--title">
+                        <h2>2K23 RECORD</h2>
+                        <p class="ma--record"><?php echo "$win W - $lose L"; ?></p>
+                    </div> 
+                    <div class="slider">
+                        <div class="slider-slides">
+                            <div class="slider-slide active">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023a.png" alt="">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023b.png" alt="">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023c.png" alt="">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023d.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+        </article>
 
         <?php if($playoffs == "false"){ ?> 
         <article class="ma--grid">
@@ -121,24 +161,18 @@ if($playoffs == "false"){
                 </div>
         <?php } ?>
 
-            <section class="ma--grid__schedule">
-                <h2>NEXT GAME</h2>
-                <?php if($playoffs == "false"){?>
-                    <p><?php echo "game #$next_game: " . "bos vs " . $ochentaydos[$current_game]; ?>
-                    <?php }else{ ?>
-                     <p><?php echo "game #R4G5: " . "bos vs " . $porival; ?></p> 
-                <?php } ?>    
-                <span class="fake--background"> 
+         
+        </article>
+
+        <?php if($playoffs == "false"){ ?>
+            <div>
+                <span class="fake--background">
                     <p class="ma--contador"><span>visitors counter</span></p>
                 </span>
                 <span class="fake--background">
                     <p class="ma--contador"><span><?php echo $cont; ?></span></p>
-                </span>
-                <p><?php echo "$win W - $lose L"; ?></p>
-            </section>
-        </article>
-
-        <?php if($playoffs == "false"){ ?>
+                </span>                
+            </div>
         <div class="ma--pag">
             <a href="<?php echo $root . '/' . $pag; ?>">1</a>
             &nbsp;&nbsp;&nbsp;
@@ -158,11 +192,6 @@ if($playoffs == "false"){
             <h1> 2K PLAYOFFS </h1>
             <?php } ?>
     </article>
-<!-- 
-    <div class="maxwidth ma--div__pstats">
-        <img class="img--pstats" src="<?php // echo $img_2k[0]; ?>" alt="player stats">
-    </div>
--->
     <article class="ma--nextGame">
             <div class="ma--nextGame__title">
             <div id="twitch"></div>
@@ -275,12 +304,7 @@ if($playoffs == "false"){
                     <span class="fake--background">
                         <p class="ma--contador"><span><?php echo $cont; ?></span></p>
                     </span>
-                    
-
                 </div>
-            <!--    <img class="trecord" src="<?php // echo $img_2k[1]; ?>" alt="team record">
-                <img class="standings" src="<?php // echo $img_2k[2]; ?>" alt="standings">
-            -->
             </section>
         </div>
 

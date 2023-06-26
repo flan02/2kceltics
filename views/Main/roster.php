@@ -21,7 +21,7 @@ if(isset($data["controller"]))
     <div class="container">
         <h1 class="ma--title"> LINEUPS </h1>
         </article>
-        <section class="ma--grid">
+        <section class="ma--gridCard">
             <article>
                 <p>1</p>
             </article>
