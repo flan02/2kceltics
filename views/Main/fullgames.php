@@ -234,7 +234,7 @@ if($playoffs == "true"){
     </div>
     <?php
         if ($nrogame !== " ") : ?>
-    <div class="modal" id="modal">
+    <div class="modalFullgames" id="modal">
         <div class=modal--box>
             <img class="modal--box__img" src="<?php echo $total; ?>" alt="game total">
         </div>
@@ -242,7 +242,7 @@ if($playoffs == "true"){
             <img class="modal--quit__cross" id="crossclose" src='<?php echo $cross; ?>' alt="quit" />
         </div>
     </div>
-    <div class="modal" id="modal2">
+    <div class="modalFullgames" id="modal2">
         <div class=modal--box>
             <img class="modal--box__img" src="<?php echo $boxscore; ?>" alt="game total">
         </div>

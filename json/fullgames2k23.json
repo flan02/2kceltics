@@ -203,10 +203,22 @@
       "MIL": "97",
       "res": "W"
     },
+    "game35": {
+      "link": "https://www.youtube.com/embed/oHNo3AXVz6o",
+      "BOS": "112",
+      "HOU": "92",
+      "res": "W"
+    },
+    "game36": {
+      "link": "https://www.youtube.com/embed/Ky4reGCJt-c",
+      "BOS": "98",
+      "LAC": "105",
+      "res": "L"
+    },
     "game": {
       "link": "",
       "BOS": "",
-      "MIN": "",
+      "HOU": "",
       "res": ""
     }
 }
