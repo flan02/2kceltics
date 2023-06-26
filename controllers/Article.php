@@ -19,7 +19,7 @@ class Article extends Controller
     }
     
     $version2k = get_version();
-
+    $playoffs = get_season();
     // ruta local o servidor para las imagenes
         $_geoplugin = new geoPlugin();
         $_geoplugin->locate();
@@ -101,7 +101,7 @@ class Article extends Controller
         $mainmenu = true;
         $controller = array("Dashboard", "Content");   // controllador p/ la interfaz
     $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");
-    $_loadViews = new LoadViews("Main/article.php", compact("root_img", "controller", "articles", "art", "unix", "buff", "r","f","css1","css2","mobile","mainmenu","iconos"));
+    $_loadViews = new LoadViews("Main/article.php", compact("root_img", "controller", "articles", "art", "unix", "buff", "r","f","css1","css2","mobile","mainmenu","iconos", "playoffs"));
     
     }
     

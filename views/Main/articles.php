@@ -1,5 +1,7 @@
 <?php
     
+//TODO Cuidado con la fecha porque se desactualiza cada temporada y muestra la semana en negativo
+
   if(isset($data["articles"])){
 
     $articles = $data["articles"]; 
@@ -81,7 +83,7 @@
         <h1> ARTICLES</h1>
     </article>
 
-    <div class="ma--container__std">
+    <div class="ma--container__lineup">
         <section class="ma--articles-grid">
             <aside class="aside--itemgrid">
                 <div class="aside--lastart">
@@ -106,8 +108,8 @@
                         </a>
                     </div>
                     <div class=art--text>
-                        <h5 class="art--week">WEEK #
-                            <?php echo $w[$k] . ": " . $date[$k]; ?> </h5>
+                        <h5 class="art--week"> <!-- WEEK # -->
+                            <?php echo /*$w[$k] . ": " . */$date[$k]; ?> </h5>
                         <a href="<?php echo $root.$articles[$k]; ?>">
                             <h1 class="art--title"><?php echo $title[$k]; ?></h1>
                         </a>
@@ -125,8 +127,8 @@
                             </a>
                         </div>
                         <div class=art--text>
-                            <h5 class="art--week">WEEK #
-                                <?php echo $w[$j] . ": " . $date[$j]; ?> </h5>
+                            <h5 class="art--week"> <!-- WEEK # -->
+                                <?php echo /* $w[$j] . ": " .*/ $date[$j]; ?> </h5>
                             <a href="<?php echo $root.$articles[$j]; ?>">
                                 <h1 class="art--title"><?php echo $title[$j]; ?></h1>
                             </a>

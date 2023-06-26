@@ -10,7 +10,7 @@ class Content extends Controller
         parent::__construct();
     }
 
-public function fullgames()
+    public function fullgames()
     {
 
         $version2k = get_version();
@@ -138,20 +138,20 @@ public function fullgames()
         $png = ".png";
         $players = array(
             "marcus smart",
+            "derrick white",
             "jaylen brown",
             "jayson tatum",
             "al horford",
+            "malcolm brogdon",
+            "grant williams",
             "robert williams",
             "payton pritchard",
-            "derrick white",
-            "aaron nesmith",
-            "grant williams",
-            "daniel theis",
-            "malik fitts",
-            "nik stauskas",
-            "brodric thomas",
             "sam hauser",
-            "luke kornet"
+            "luke kornet",
+            "justin champagnie",
+            "mfiondu kabengele",
+            "blake griffin",
+            "jd davison"
         );
 
         $i = 0;

@@ -16,7 +16,7 @@ if (isset($data["controller"])) {
     $playoffs = $data["playoffs"];
     $porival = $data["porival"];  
     $gamename = $data["gamename"];
-    
+    $background = "http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/video/film-grain-background.mp4";
     $playoffs_root = $data["playoffs_root"];
 
     for ($p = 0; $p < count($path_2k); $p++) :
@@ -173,14 +173,16 @@ if($playoffs == "false"){
                 <?php echo $local; ?>
                 <span>VS</span>
                 <?php echo $visita[$current_game]; ?>
-                
+                <!-- <video class="backvideo" playsinline autoplay muted loop >
+                <source src='<?php // echo $background; ?>'>
+                </video> -->
             </div>
             <div class="ma--nextGame__links">
                 <a id="pstats" href="#" class="panel__btn">player stats</a>
                 <a id="standings" href="#" class="panel__btn">standings</a>
                 <a id="trecord" href="#" class="panel__btn">team record</a>
             </div>
-            
+           
     </article>
     <div class="ma--container">
     <?php if($playoffs == "false"){ ?>

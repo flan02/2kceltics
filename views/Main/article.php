@@ -74,7 +74,7 @@ if(isset($data["articles"]))
             <article class="articles--itemgrid">
                 <article class="article--flex">
                     <h1 class="article--title"><?php echo $title_main; ?></h1>
-                    <h5 class="art--week__date"> WEEK # <?php echo $week . " : " . $date; ?></h5>
+                    <h5 class="art--week__date"> <?php echo /* $week . " : " . */ $date; ?></h5>
                     <article class="article--note">
                         <img class='art--cont__img-big' src="<?php echo $img; ?>" alt="<?php echo $title_main ?>" />
                     </article>
