@@ -211,11 +211,7 @@ class Dashboard extends Controller
                 }
             }
         }
-   //     echo $current_game;
-     /*   $win = count($win);
-        $lose = count($lose);
-        */
-        // optimizamos el contador de visitas
+
         $from = "dashboard";
         $cont = contadorvisitas($from);
         
@@ -465,7 +461,7 @@ class Dashboard extends Controller
                 $playoffs = get_season();
                 $mainmenu = false; // para que cuando entremos al sitio NO muestre el desplegable
                 
-                $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");
+                $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "arrow-down.svg", "menu-bars.svg");
                 $controller = array("Dashboard", "Content/{$header}");    // controllador para el main
                 $_loadViews = new LoadViews("Main/headers.php", compact("root_img", "cont", "mobile", "controller", "r", "f", "css1", "css2", "iconos", "mainmenu", "playoffs"));
         

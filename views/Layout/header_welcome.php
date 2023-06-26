@@ -34,8 +34,8 @@ if (isset($data)) {
     $icon_card = root($r, $icono[6]);
     $icon_paypal = root($r, $icono[7]);
     $icon_aviso = root($r, $icono[8]);
-    $icon_menu = root($r, $icono[9]);
-    $icon_slide = root($r, $icono[10]);
+    $icon_menu = root($r, $icono[10]);
+    $icon_slide = root($r, $icono[9]);
 
     if($mobile) {
         $js_menu = root("frontend/js_mobile/", "menu.js");
@@ -149,7 +149,7 @@ if (isset($data)) {
             </article>
             <?php } else {?>
                 <article class="he--art__imgplayoffs"> 
-                <img class="logoplayoffs" src="<?php echo $root_img; ?>/playasdasdoffs-logo.png" alt="2k23 2nd season">
+                <p class="he--nroSeason">2nd 2k season</p>
                 <a class="he--subs" href="<?php echo $subscribe; ?>">subscribe to our newsletter</a>
                 </article>
                 <?php } ?>

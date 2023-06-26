@@ -49,8 +49,8 @@
                 </div>
             </article>
             <article class=art--text>
-                <h5 class="art--week">WEEK #
-                    <?php echo $w[$i] . ": " . $date[$i]; ?> </h5>
+                <h5 class="art--week"> <!-- WEEK # -->
+                    <?php echo /* $w[$i] . ": " .*/ $date[$i]; ?> </h5>
                 <a href="<?php  echo $root.$articles[$i]; ?>">
                     <h1 class="art--title"><?php  echo $title[$i]; ?></h1>
                 </a>

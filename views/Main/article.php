@@ -46,7 +46,7 @@ if(isset($data["articles"]))
     <section class="section--flexbox">
         <article class="article--title">
             <h1 class="article--h1"><?php echo $title_main; ?></h1>
-            <h5> WEEK # <?php echo $week . " : " . $date; ?></h5>
+            <h5> <!-- WEEK # --><?php echo  /*$week . " : " . */ $date; ?></h5>
         </article>
         <article class="article--img">
             <img class='art--cont__img-big' src="<?php echo $img; ?>" alt="<?php echo $title_main ?>" />
