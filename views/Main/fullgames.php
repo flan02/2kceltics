@@ -35,6 +35,8 @@ if($playoffs == "false"){
     $box2 = $current_game - 2;
     $box3 = $current_game - 3;
     $box4 = $current_game - 4;
+    $box5 = $current_game - 5;
+    $box6 = $current_game - 6;
 
 }else {
     $box = $showgamename[0];
@@ -42,14 +44,14 @@ if($playoffs == "false"){
     $box2 = $showgamename[2];
     $box3 = $showgamename[3];
     $box4 = $showgamename[4];
+    $box5 = $showgamename[5];
 }
     
-
-    $season82 = $data["array_links"];   // links de los partidos de youtube
-    $bos_points = $data["array_bos_points"];
-    $rival_points = $data["array_rival_points"];
-    $rival_name = $data["array_rival_name"];
-    $ancla = "#display";   // ancla p/ redirigir a los videos
+$season82 = $data["array_links"];   // links de los partidos de youtube
+$bos_points = $data["array_bos_points"];
+$rival_points = $data["array_rival_points"];
+$rival_name = $data["array_rival_name"];
+$ancla = "#display";   // ancla p/ redirigir a los videos
 
 }
 
@@ -65,13 +67,15 @@ if($playoffs == "true"){
         break;
         case $box4: $adjust_game = count($season82)-5;
         break;
+        case $box5: $adjust_game = count($season82)-6;
+        break;
+        
     endswitch;    
     } else {
         $adjust_game = $nrogame - 1;
     };
 
 ?>
-
 
 <?php if ($mobile) { ?>
 <main>
@@ -173,13 +177,14 @@ if($playoffs == "true"){
                 src="<?php echo $season82[$adjust_game]; ?>?controls=2&showinfo=1&modestbranding=1&rel=0&theme=light&showsearch=0"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <?php } else { ?>
+                allowfullscreen>
+            </iframe>
+        <?php } else { ?>
             <div class="ma--iframe__display">
                 <img class="ma--iframe__logo" src='<?php echo $icon_tv; ?>' alt="tv" />
             </div>
-            <?php } ?>
- 
+        <?php } ?>
+               
             <section class="ma--spoiler">
                 <article class="ma--spoiler__title">
                     <p>GAME RESULTS</p>
@@ -202,7 +207,7 @@ if($playoffs == "true"){
                 <article class="ma--spoiler__youtube">
                     <p class=" ma--spoiler__p">...or you can watch every game in our channel</p>
                     <a class="ma--spoiler__icon" target="_blank" rel="noreferrer noopener"
-                        href="https://www.youtube.com/playlist?list=PLFAsJY1mWn5YFwuuFGqgShhU9pauneNdC">
+                        href="https://www.youtube.com/playlist?list=PLFAsJY1mWn5Z52Uppz2K2ld-rt8jaeF3e">
                         <img class="" src="<?php echo $youtube; ?>" alt="youtube">
                     </a>
                 </article>
@@ -210,21 +215,20 @@ if($playoffs == "true"){
             </section>
         </section>
         <aside class="ma--selectYoutube">
-                <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
-                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                    <span class="ma--game__span"><?php echo "game " . "#" . $box; ?></span></a>
                 <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
-                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                    <span class="ma--game__span"><?php echo "game " . "#" . $box1; ?></span></a>
-                <a class="ma--game" href="<?php echo $root . "/" . $box2. $ancla; ?>">
-                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                    <span class="ma--game__span"><?php echo "game " . "#" . $box2; ?></span></a>
-                <a class="ma--game" href="<?php echo $root . "/" . $box3 . $ancla; ?>">
-                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                    <span class="ma--game__span"><?php echo "game " . "#" . $box3; ?></span></a>
+                <span class="ma--game__span"><?php echo "game " . "#" . $box1 . ": BOS - " . $rival_name[$box2]; ?></span></a>
+                
+                <a class="ma--game" href="<?php echo $root . "/" . $box2 . $ancla; ?>">
+                <span class="ma--game__span"><?php echo "game " . "#" . $box2 . ": BOS - " . $rival_name[$box3]; ?></span></a>
+                
+                <a class="ma--game" href="<?php echo $root . "/" . $box3. $ancla; ?>">
+                <span class="ma--game__span"><?php echo "game " . "#" . $box3 . ": BOS - " . $rival_name[$box4]; ?></span></a>
+                
                 <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
-                    <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                    <span class="ma--game__span"><?php echo "game " . "#" . $box4; ?></span></a>
+                <span class="ma--game__span"><?php echo "game " . "#" . $box4 . ": BOS - " . $rival_name[$box5]; ?></span></a>
+                
+                <a class="ma--game" href="<?php echo $root . "/" . $box5 . $ancla; ?>">
+                <span class="ma--game__span"><?php echo "game " . "#" . $box5 . ": BOS - " . $rival_name[$box6]; ?></span></a>
         </aside>
 
     </div>

@@ -25,10 +25,10 @@ public function fullgames()
         }
 
         if($playoffs == "false"){
-        $json_season82 = file_get_contents("json/fullgames2k22.json");
+        $json_season82 = file_get_contents("json/fullgames2k23.json");
         $json = json_decode($json_season82, true);
         }else{
-         $json_season82 = file_get_contents("json/playoffs2k22.json");
+         $json_season82 = file_get_contents("json/playoffs2k23.json");
          $json = json_decode($json_season82, true);
         }
         $current_game = count($json);
@@ -95,7 +95,7 @@ public function fullgames()
             $css2 = $develop[1];
             $mainmenu = true;
         }
-
+        
         $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");
 
         $controller = array("Dashboard", "Content");   // controllador p/ la interfaz

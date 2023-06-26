@@ -4,7 +4,7 @@ if (isset($data["controller"])) {
     $cont = $data["cont"];
     $pag = $data["pag"];
     $current_game = $data["current_game"];
-    $current_game = $current_game -1;
+    $current_game = $current_game -2;
     $win = $data["win"];
     $win = count($win);
     $lose = $data["lose"];
