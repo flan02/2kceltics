@@ -2,7 +2,7 @@
     <section class="foo">
     <h5>2kceltics 2022-2023</h5>
 </section>
-
+<script src="<?php echo $js_main; ?>" type="module" ></script>
 </body>
 </html>
 

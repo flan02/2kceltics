@@ -158,6 +158,7 @@ if($playoffs == "true"){
     <?php if ($nrogame != " "): ?>
     <article class="disqus--cont">
         <div id="disqus_thread"></div>
+        <button></button>
         <script>
             /**
              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.

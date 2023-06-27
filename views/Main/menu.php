@@ -31,7 +31,7 @@ if (isset($data["controller"])) {
     $iconQuit = root("resources/icons/", "x-quit-solid.svg");
     //$path = url_base() . "UniServerZ localhost/framework scylla/2kceltics";
 
-    $js_main = root("frontend/js_mobile/", "main.js");
+    $js_main = root("frontend/js_mobile/", "index.js");
     $twitch = "https://player.twitch.tv/js/embed/v1.js";
 
     $local = "<img class='schedule--logo' src='$root_logo/bos.png' alt='team'/>";   // la var $root se definio en el header_welcome
@@ -190,8 +190,16 @@ if($playoffs == "false"){
             <a href="<?php echo $root . '/' . $pag2; ?>">2</a>
         </div>
        <?php } ?>
+       <div id="mainmodal">
+           <section class="" >
+               <img id="boximg" class="img--pstats" src="" alt="" >
+            </section>
+            <div class="modal--quit__cross" >
+                <img id="maincross" src="<?php echo $iconQuit; ?>" alt="">
+            </div>
+        </div>
     </div>
-    <script src="<?php echo $js_main; ?>"></script>
+    
 </main>
 
 <?php } else { ?>

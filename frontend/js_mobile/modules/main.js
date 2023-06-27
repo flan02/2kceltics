@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", () => {
+export default function BackgroundDinamic() {
     let interval = 1000
     const colors = ['#1A0501', '#1A0501', '#1A0501', '#01041A', '#01041A', '#01041A', '#000F01', '#000F01', '#1B0119', '#1B0119' ]
     
@@ -22,4 +22,4 @@ document.addEventListener("DOMContentLoaded", () => {
           if(i >= $slides.length) i = 0
           $slides[i].classList.add("active")
       }, time)
-  })
+}
