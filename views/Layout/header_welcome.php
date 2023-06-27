@@ -1,5 +1,6 @@
 <?php
 if (isset($data)) {
+    //! $playoffs devuelve 1/0 analizar cual necesitamos p/ mostrar o quitar el logo.
     $playoffs = $data["playoffs"];
     $root_img = $data["root_img"];
     $mobile = $data["mobile"];
@@ -142,7 +143,7 @@ if (isset($data)) {
                 <article class="he--art__img"><img class="he--img" src="<?php echo $root_img; ?>/big-three-21-22.png" alt="bigthree"></article>
                 <article class="he--art__img"><img class="he--img" src="<?php echo $root_img; ?>/celtics-logo.png" alt="logo"> </article>
             </section>
-            <?php if($playoffs == "true"){ ?>
+            <?php if($playoffs == 0){ ?>
             <article class="he--art__imgplayoffs"> 
                 <img class="logoplayoffs" src="<?php echo $root_img; ?>/playoffs-logo.png" alt="playoffs logo" srcset="">
                 <a class="he--subs" href="<?php echo $subscribe; ?>">Tipoff 2K23 subscribe</a>

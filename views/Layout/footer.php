@@ -3,6 +3,10 @@
     <h5>2kceltics 2022-2023</h5>
 </section>
 
+</body>
+</html>
+
+
 <?php
 } else {?>
 

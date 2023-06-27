@@ -8,9 +8,8 @@ if (isset($data["controller"])) {
     $spoiler_mobile = root("frontend/js_mobile/", "spoilers.js");
     $cross = root("resources/icons/", "x-quit-solid.svg");
     $youtube = root("resources/icons/", "youtube.svg");
-
     $showgamename = $data["gamename"];
-    
+
     if (isset($data["game"])) {
         $nrogame = $data["game"];
         $total = root("resources/img/games/", "$nrogame/gtotal.png");
@@ -20,10 +19,10 @@ if (isset($data["controller"])) {
     }
 
     if(isset($data["playoffs"])) $playoffs = $data["playoffs"];
-
+    
     $current_game = $data["current_game"];
 
-if($playoffs == "false"){
+if($playoffs == "true"){
     $fix_game = $current_game - 1;
     $fix_game1 = $fix_game - 1;
     $fix_game2 = $fix_game1 - 1;
@@ -82,20 +81,20 @@ if($playoffs == "true"){
     <div class="container">
         <h1 class="ma--title"> FULL GAMES </h1>
         <section class="ma--choosegame">
-            <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
-                <span class="ma--game__span"><?php echo "game " . "#" . $box; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+                <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
+                    <span class="ma--game__span"><?php echo "game " . "#" . $box; ?></span>
+                </a>
+                <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box1; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box2 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+            
+                <a class="ma--game" href="<?php echo $root . "/" . $box2 . $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box2; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box3 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+            
+                <a class="ma--game" href="<?php echo $root . "/" . $box3 . $ancla; ?>">
                 <span class="ma--game__span"><?php echo "game " . "#" . $box3; ?></span></a>
-            <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
-                <img class="ma--game__logo" src='<?php echo $logo; ?>' alt="logo">
+            
+                <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
+                
                 <span class="ma--game__span"><?php echo "game " . "#" . $box4; ?></span></a>
         </section>
 
@@ -115,15 +114,11 @@ if($playoffs == "true"){
 
             <section class="ma--spoiler">
                     <article class="ma--spoiler__title">
-                    <p>GAME RESULTS</p>
+                    <p>STATS</p>
                     </article>
                     <?php if ($nrogame !== " ") { ?>
-                    <div class="ma--spoiler__results">
-                        <p class="ma--spoiler__text"></p><?php echo "game # $nrogame: "; ?></p>
-                    </div>
-
                 <article class="ma--spoiler__botones">
-                    <p><button id="btn--spoiler1" class="ma--spoiler__btn">FINAL STATS</button></p>
+                    <p><button id="btn--spoiler1" class="ma--spoiler__btn">GAME STATS</button></p>
                     <p><button id="btn--spoiler2" class="ma--spoiler__btn">BOXSCORE</button></p>
                 </article>
     
@@ -132,8 +127,8 @@ if($playoffs == "true"){
                 <article class="ma--spoiler__youtube">
                     <p class=" ma--spoiler__p">...or you can watch every game in our channel</p>
                     <a class="ma--spoiler__icon" target="_blank" rel="noreferrer noopener"
-                        href="https://www.youtube.com/playlist?list=PLFAsJY1mWn5YFwuuFGqgShhU9pauneNdC">
-                        <img class="ma--spoiler__icon" src="<?php echo $youtube; ?>" alt="youtube">
+                        href="https://www.youtube.com/playlist?list=PLFAsJY1mWn5Z52Uppz2K2ld-rt8jaeF3e">
+                        <img class="" src="<?php echo $youtube; ?>" alt="youtube">
                     </a>
 
                 </article>

@@ -23,7 +23,16 @@ if (isset($data["controller"])) {
         $img_2k[$p] = $path_2k[$p];
     endfor;
 
+    $carrousel1 = root("resources/img/carrousel/", "2kceltics2023a.png");
+    $carrousel2 = root("resources/img/carrousel/", "2kceltics2023b.png");
+    $carrousel3 = root("resources/img/carrousel/", "2kceltics2023c.png");
+    $carrousel4 = root("resources/img/carrousel/", "2kceltics2023d.png");
+    //resources/icons/x-quit-solid.svg
+    $iconQuit = root("resources/icons/", "x-quit-solid.svg");
     //$path = url_base() . "UniServerZ localhost/framework scylla/2kceltics";
+
+    $js_main = root("frontend/js_mobile/", "main.js");
+    $twitch = "https://player.twitch.tv/js/embed/v1.js";
 
     $local = "<img class='schedule--logo' src='$root_logo/bos.png' alt='team'/>";   // la var $root se definio en el header_welcome
 
@@ -34,11 +43,12 @@ if (isset($data["controller"])) {
 
     $root = get("/Dashboard", "menu");
 
-    if ($pag == 1) {
+    if ($pag == 2) {
         $i = 40;
         $k = 60;
         $j = 60;
         $z = 82;
+        $pag = 1;
         $pag2 = 2;
     } else {
 
@@ -47,6 +57,7 @@ if (isset($data["controller"])) {
         $j = 20;
         $z = 40;
         $pag = 1;
+        $pag2 = 2;
     }
 } else {
     die("error 504");
@@ -96,16 +107,16 @@ if($playoffs == "false"){
                     <div class="slider">
                         <div class="slider-slides">
                             <div class="slider-slide active">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023a.png" alt="">
+                                <img src="<?php echo $carrousel1; ?>" alt="photo 1">
                             </div>
                             <div class="slider-slide">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023b.png" alt="">
+                                <img src="<?php echo $carrousel2; ?>" alt="photo 2">
                             </div>
                             <div class="slider-slide">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023c.png" alt="">
+                                <img src="<?php echo $carrousel3; ?>" alt="photo 3">
                             </div>
                             <div class="slider-slide">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023d.png" alt="">
+                                <img src="<?php echo $carrousel4; ?>" alt="photo 4">
                             </div>
                         </div>
                     </div>
@@ -113,7 +124,7 @@ if($playoffs == "false"){
         </article>
 
         <?php if($playoffs == "false"){ ?> 
-        <article class="ma--grid">
+        <article class="ma--grid" id="mainGrid">
             <article class="ma--grid__col20">
                 <section class="ma--flex">
                     <?php
@@ -180,6 +191,7 @@ if($playoffs == "false"){
         </div>
        <?php } ?>
     </div>
+    <script src="<?php echo $js_main; ?>"></script>
 </main>
 
 <?php } else { ?>
@@ -222,14 +234,15 @@ if($playoffs == "false"){
                         $j = 60;
                         $z = 60;
                         $k = 82;
+                     //   $pag = 2;
                         $pag2 = 1; // switch 2
                     } else {
                         $i = 0;
                         $j = 20;
                         $z = 20;
                         $k = 40;
-                        $pag = 2; // switch 1
-                        $pag2 = 1; // switch 2
+                        $pag = 1; // switch 1
+                        $pag2 = 2; // switch 2
                     }
 
                     for ($i; $i < $j; $i++) :
@@ -284,16 +297,16 @@ if($playoffs == "false"){
                     <div class="slider">
                         <div class="slider-slides">
                             <div class="slider-slide active">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023a.png" alt="">
+                                <img src="<?php echo $carrousel1 ; ?>" alt="photo 1">
                             </div>
                             <div class="slider-slide">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023b.png" alt="">
+                                <img src="<?php echo $carrousel2 ; ?>" alt="photo 2">
                             </div>
                             <div class="slider-slide">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023c.png" alt="">
+                                <img src="<?php echo $carrousel3 ; ?>" alt="photo 3">
                             </div>
                             <div class="slider-slide">
-                                <img src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/img/carrousel/2kceltics2023d.png" alt="">
+                                <img src="<?php echo $carrousel4 ; ?>" alt="photo 4">
                             </div>
                         </div>
                     </div>
@@ -322,12 +335,12 @@ if($playoffs == "false"){
             <img id="boximg" class="img--pstats" src="" alt="" >
         </section>
         <div class="modal--quit__cross" >
-            <img id="maincross" src="http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/icons/x-quit-solid.svg" alt="">
+            <img id="maincross" src="<?php echo $iconQuit; ?>" alt="">
         </div>
     </div>
     
 
-    <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+    <script src= "<?php echo $twitch; ?>"></script>
     
     <script type="text/javascript">
         var options = {

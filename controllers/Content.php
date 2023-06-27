@@ -31,6 +31,7 @@ class Content extends Controller
          $json_season82 = file_get_contents("json/playoffs2k23.json");
          $json = json_decode($json_season82, true);
         }
+        
         $current_game = count($json);
         $i = 0;
         $j = 0;
@@ -89,6 +90,7 @@ class Content extends Controller
             $mobile = $develop[0];
             $css2 = $develop[1];
             $mainmenu = true;
+            
         } else {
             $develop = develop_mode("desktop");
             $mobile = $develop[0];
