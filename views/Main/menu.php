@@ -221,9 +221,6 @@ if($playoffs == "false"){
                 <?php echo $local; ?>
                 <span>VS</span>
                 <?php echo $visita[$current_game]; ?>
-                <!-- <video class="backvideo" playsinline autoplay muted loop >
-                <source src='<?php // echo $background; ?>'>
-                </video> -->
             </div>
             <div class="ma--nextGame__links">
                 <a id="pstats" href="#" class="panel__btn">player stats</a>
@@ -347,9 +344,7 @@ if($playoffs == "false"){
         </div>
     </div>
     
-
-    <script src= "<?php echo $twitch; ?>"></script>
-    
+    <script src= "<?php echo $twitch; ?>"></script> 
     <script type="text/javascript">
         var options = {
         width: 400,

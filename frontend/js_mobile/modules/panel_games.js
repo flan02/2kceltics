@@ -30,6 +30,7 @@ export default function panelGames(id,sel,close,boximg, currentGame){
              pic = $links[1].id
              pic = pic + ".png"
              $imgbox.classList.remove("main__modal--img")
+             $imgbox.classList.remove("main__modal--imgsm")
              $imgbox.classList.add("main__modal--imgbig")
              $imgbox.setAttribute("src", rootimg+pic)
             
@@ -39,6 +40,7 @@ export default function panelGames(id,sel,close,boximg, currentGame){
             pic = $links[2].id
             pic = pic + ".png"
             $imgbox.classList.remove("main__modal--img")
+            $imgbox.classList.remove("main__modal--imgsm")
             $imgbox.classList.add("main__modal--imgbig")
             $imgbox.setAttribute("src", rootimg+pic) 
             $mainmodal.style.visibility = 'visible';

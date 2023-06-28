@@ -1,3 +1,4 @@
+
 import navmenu from "./modules/menu.js";
 import panelGames from "./modules/panel_games.js";
 import slider from "./modules/slider.js";
@@ -14,8 +15,6 @@ d.addEventListener("DOMContentLoaded", () =>{
         setInterval(() => {
             let pos = Math.floor(Math.random()*10)
             d.getElementById('main').style.backgroundColor = colors[`${pos}`]
-           // d.getElementById('mainFullgames').style.backgroundColor = colors[`${pos}`]
-        
         }, interval);
     }
         

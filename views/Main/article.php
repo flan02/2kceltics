@@ -54,6 +54,28 @@ if(isset($data["articles"]))
         <article class="article--note">
             <p class="article--buff"><?php echo $buff; ?></p>
         </article>
+        <article class="disqus--cont">
+            <div id="disqus_thread"></div>
+            <button></button>
+            <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+             /*
+             var disqus_config = function () {
+              //   this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+              //   this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+              */  
+               (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://www-2kceltics-xyz.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </article>  
     </section>
 </main>
 <?php } else { ?>
@@ -70,7 +92,6 @@ if(isset($data["articles"]))
                     <?php endfor;?>
                 </div>
             </aside>
-
             <article class="articles--itemgrid">
                 <article class="article--flex">
                     <h1 class="article--title"><?php echo $title_main; ?></h1>
@@ -80,6 +101,27 @@ if(isset($data["articles"]))
                     </article>
                     <p class="article--buff"><?php echo $buff; ?></p>
                 </article>
+                <article class="disqus--cont__article">
+                    <div id="disqus_thread"></div>
+                    <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    //  this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    //  this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */ 
+                    (function() { // DON'T EDIT BELOW THIS LINE
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://www-2kceltics-xyz.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </article>  
             </article>
         </section>
     </div>

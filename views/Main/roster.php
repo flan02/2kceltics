@@ -3,9 +3,12 @@
 if(isset($data["controller"]))
 {   
     $root = get("Content", "fullgames");
+    $url_players = get("/Content", "roster/");
     $logo = root("resources/icons/","celtics-logo-favicon.png");
     $root_players = $data["root_players"];
     $name_players = $data["players"];
+    $data_players = $data["players_mobile"];
+    $titleLink = $data["titleLink"];
     $players = array();
     $names = array();
     for($i=0; $i<count($root_players); $i++):
@@ -16,28 +19,45 @@ if(isset($data["controller"]))
 
 ?>
 
-<?php if($mobile) { ?>
+<?php if($mobile) { 
+    
+    if($titleLink == 0){
+        $start = 0;
+        $role = $titleLink + 5;
+        $bench = $titleLink + 10;
+        $j = 5;
+    }
+    if($titleLink == 5){
+    $start = 0;
+    $role = $titleLink + 0;
+    $bench = $titleLink + 5;
+    $j = 10;
+    }
+    if($titleLink == 10){
+        $start = 0;
+        $role = $titleLink + 5;
+        $bench = $titleLink;
+        $j=15;
+    }   
+    ?>
+
+
 <main>
     <div class="container">
-        <h1 class="ma--title"> LINEUPS </h1>
-        </article>
-        <section class="ma--gridCard">
-            <article>
-                <p>1</p>
-            </article>
-            <article>
-                <p>2</p>
-            </article>
-            <article>
-                <p>3</p>
-            </article>
-            <article>
-                <p>4</p>
-            </article>
-            <article>
-                <p>5</p>
-            </article>
-        </section>
+        <nav class="roster--nav">
+            <a class="roster--link" href="<?php echo $url_players . $start;?>"><?php echo "STARTING-5"; ?></a>
+            <a class="roster--link" href="<?php echo $url_players . $role;?>"><?php echo "ROLE"; ?></a>
+            <a class="roster--link" href="<?php echo $url_players . $bench;?>"><?php echo "BENCH"; ?></a>
+        </nav>
+    <?php 
+    for($titleLink; $titleLink< $j; $titleLink++):
+    ?>    
+        <figure class="roster--card">
+            <img class="roster--photo" src="<?php echo $players[$titleLink]?>" alt="">
+            <figcaption class="roster--figcaption"> #<?php echo $data_players[$titleLink]["nro"];?> | <?php echo $data_players[$titleLink]["pos"];?> - <?php echo $data_players[$titleLink]["name"]?></figcaption>
+        </figure>
+    <?php endfor; ?>
+    
     </div>
 </main>
 <?php } else {?>

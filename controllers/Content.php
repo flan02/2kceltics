@@ -4,7 +4,7 @@
 
 class Content extends Controller
 {
-    
+
     function __construct()
     {
         parent::__construct();
@@ -24,14 +24,14 @@ class Content extends Controller
             $game = " ";
         }
 
-        if($playoffs == "false"){
-        $json_season82 = file_get_contents("json/fullgames2k23.json");
-        $json = json_decode($json_season82, true);
-        }else{
-         $json_season82 = file_get_contents("json/playoffs2k23.json");
-         $json = json_decode($json_season82, true);
+        if ($playoffs == "false") {
+            $json_season82 = file_get_contents("json/fullgames2k23.json");
+            $json = json_decode($json_season82, true);
+        } else {
+            $json_season82 = file_get_contents("json/playoffs2k23.json");
+            $json = json_decode($json_season82, true);
         }
-        
+
         $current_game = count($json);
         $i = 0;
         $j = 0;
@@ -39,9 +39,9 @@ class Content extends Controller
         $z = 0;
 
         foreach ($json as $season82) {
-           
+
             $array_season82[$i] = $season82;
-            
+
             foreach ($array_season82[$i] as $clave => $valor) {
                 if ($j == 0) {
                     $array_links[$i] = $valor;   // link de youtube          
@@ -60,20 +60,20 @@ class Content extends Controller
             $i++;
         }
 
-        foreach($json as $cla => $val):
+        foreach ($json as $cla => $val) :
             $gamename[$z] = $cla;
             $z++;
         endforeach;
 
-        rsort($gamename);       
-        if($playoffs == "true") krsort($array_links);
+        rsort($gamename);
+        if ($playoffs == "true") krsort($array_links);
 
         // ruta local o servidor para las imagenes
         $_geoplugin = new geoPlugin();
         $_geoplugin->locate();
         $ip = $_geoplugin->ip;
         if ($ip == "127.0.0.1" || $ip == "::1") {
-            $root_img = url_base() . "UniServerZ localhost/framework scylla/".$version2k."/resources/img";
+            $root_img = url_base() . "UniServerZ localhost/framework scylla/" . $version2k . "/resources/img";
         } else {
             $root_img = "https://www.2kceltics.xyz/resources/img";
         }
@@ -90,14 +90,13 @@ class Content extends Controller
             $mobile = $develop[0];
             $css2 = $develop[1];
             $mainmenu = true;
-            
         } else {
             $develop = develop_mode("desktop");
             $mobile = $develop[0];
             $css2 = $develop[1];
             $mainmenu = true;
         }
-        
+
         $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");
 
         $controller = array("Dashboard", "Content");   // controllador p/ la interfaz
@@ -106,6 +105,12 @@ class Content extends Controller
 
     public function roster()
     {
+        if (isset($_GET["game"])) {
+            $titleLink = $_GET["game"];
+        } else {
+            $titleLink = 0;
+        }
+
         $version2k = get_version();
         $playoffs = get_season();
         // ruta local o servidor para las imagenes
@@ -114,7 +119,7 @@ class Content extends Controller
         $ip = $_geoplugin->ip;
 
         if ($ip == "127.0.0.1" || $ip == "::1") {
-            $root_img = url_base() . "UniServerZ localhost/framework scylla/". $version2k . "/resources/img/";
+            $root_img = url_base() . "UniServerZ localhost/framework scylla/" . $version2k . "/resources/img/";
         } else {
             $root_img = "https://www.2kceltics.xyz/resources/img";
         }
@@ -156,17 +161,94 @@ class Content extends Controller
             "jd davison"
         );
 
+        $players_mobile = array(
+            [
+                "nro" => "36",
+                "pos" => "PG",
+                "name" => "Marcus Smart"
+            ],
+            [
+                "nro" => "9",
+                "pos" => "SG",
+                "name" => "Derrick White"
+            ],
+            [
+                "nro" => "7",
+                "pos" => "SF",
+                "name" => "Jaylen Brown"
+            ],
+            [
+                "nro" => "0",
+                "pos" => "PF",
+                "name" => "Jayson Tatum"
+            ],
+            [
+                "nro" => "42",
+                "pos" => "C",
+                "name" => "Al Horford"
+            ],
+            [
+                "nro" => "13",
+                "pos" => "PG",
+                "name" => "Malcolm Brogdon"
+            ],
+            [
+                "nro" => "12",
+                "pos" => "PF",
+                "name" => "Grant Williams"
+            ],
+            [
+                "nro" => "44",
+                "pos" => "C",
+                "name" => "Robert Williams"
+            ],
+            [
+                "nro" => "11",
+                "pos" => "PG",
+                "name" => "Payton Pritchard"
+            ],
+            [
+                "nro" => "30",
+                "pos" => "SF",
+                "name" => "Sam Hauser"
+            ],
+            [
+                "nro" => "40",
+                "pos" => "C",
+                "name" => "Luke Kornet"
+            ],
+            [
+                "nro" => "99",
+                "pos" => "SF",
+                "name" => "Justin Champagnie"
+            ],
+            [
+                "nro" => "28",
+                "pos" => "PF",
+                "name" => "Mfiondu Kabengele"
+            ],
+            [
+                "nro" => "91",
+                "pos" => "C",
+                "name" => "Blake Griffin"
+            ],
+            [
+                "nro" => "20",
+                "pos" => "PG",
+                "name" => "JD Davison"
+            ],
+        );
+
         $i = 0;
         $root_players = array();
         for ($i; $i < count($players); $i++) :
             $root_players[$i] = root("resources/img/players/", $players[$i] . $png);
         endfor;
 
-
         $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");
 
         $controller = array("Dashboard", "Content");
-        $_loadViews = new LoadViews("Main/roster.php", compact("root_img", "controller", "r", "f", "css1", "css2", "mobile", "iconos", "mainmenu", "players", "root_players", "playoffs"));
+        $_loadViews = new LoadViews("Main/roster.php", compact("root_img", "controller", "r", "f", "css1", "css2", "mobile", "iconos", "mainmenu", "players", "players_mobile", "root_players", "playoffs", "titleLink"));
     }
 
 
@@ -178,9 +260,9 @@ class Content extends Controller
         $_geoplugin = new geoPlugin();
         $ip = $_geoplugin->locate();
         $ip = $_geoplugin->ip;
-        
-        if ($ip == "127.0.0.1" || $ip == "::1" ) {
-            $root_img = url_base() . "UniServerZ localhost/framework scylla/". $version2k . "/resources/img";
+
+        if ($ip == "127.0.0.1" || $ip == "::1") {
+            $root_img = url_base() . "UniServerZ localhost/framework scylla/" . $version2k . "/resources/img";
         } else {
             $root_img = "https://www.2kceltics.xyz/resources/img";
         }

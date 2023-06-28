@@ -983,6 +983,11 @@ a .nav--icon {
   padding: 0.5rem 1rem;
   border: thin solid grey;
 }
+.disqus--cont__article {
+  margin: 0.5rem auto 0 auto;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+}
 
 /*
 $breakpoints: (
@@ -1251,7 +1256,8 @@ $breakpoints: (
           align-items: center;
   width: 60%;
   margin: 0.5rem 0 0 0.5rem;
-  border: thin solid orange;
+  border: thin solid grey;
+  z-index: 2;
   color: springgreen;
 }
 
@@ -1301,6 +1307,15 @@ $breakpoints: (
   color: whitesmoke;
 }
 
+/*
+  .ma--backVideo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height:100%;
+    z-index: -1;
+  }
+*/
 .ma--schedule__col20 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1464,7 +1479,6 @@ $breakpoints: (
   color: royalblue;
 }
 
-/* ****************************** CARD p/ las lineups ***************************** */
 .ma--container__lineup {
   margin: auto;
   max-width: 1920px;
@@ -2620,6 +2634,7 @@ $breakpoints: (
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 1;
+  /* transform: translateX(-50%) translateY(-50%); */
 }
 
 .subs--form {
