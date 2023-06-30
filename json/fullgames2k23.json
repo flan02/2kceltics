@@ -214,5 +214,17 @@
       "BOS": "98",
       "LAC": "105",
       "res": "L"
+    },
+    "game37": {
+      "link": "https://www.youtube.com/embed/oK4R_6snqZw",
+      "BOS": "99",
+      "DEN": "94",
+      "res": "W"
+    },
+    "game38": {
+      "link": "https://www.youtube.com/embed/jvn47sDQEAM",
+      "BOS": "102",
+      "OKC": "94",
+      "res": "W"
     }
 }

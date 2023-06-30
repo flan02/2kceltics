@@ -101,7 +101,7 @@ if(isset($data["articles"]))
                     </article>
                     <p class="article--buff"><?php echo $buff; ?></p>
                 </article>
-                <article class="disqus--cont__article">
+                <article class="disqus--cont__art">
                     <div id="disqus_thread"></div>
                     <script>
                     /**

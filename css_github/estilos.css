@@ -1676,7 +1676,7 @@ $breakpoints: (
   border-radius: 3%;
 }
 
-.art--cont__img {
+.card--cont__img {
   position: absolute;
   width: 90%;
   height: 90%;
@@ -1835,7 +1835,7 @@ $breakpoints: (
 
 .art--cont__img {
   position: absolute;
-  width: 100%;
+  width: 80%;
   height: 100%;
   border-radius: 5%;
   -o-object-fit: fill;
@@ -1930,6 +1930,10 @@ $breakpoints: (
 }
 
 /* ***************************   ARTICLE  ********************************* */
+.disqus--cont__art {
+  background-color: #333;
+}
+
 .article--flex {
   display: -webkit-box;
   display: -ms-flexbox;

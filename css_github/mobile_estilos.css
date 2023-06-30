@@ -279,80 +279,6 @@ a .nav--icon {
   background-color: #444;
 }
 
-.articles--itemgrid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 40% 59%;
-  grid-template-columns: 40% 59%;
-}
-
-.art--text {
-  margin: 1rem 0 0 1rem;
-}
-
-.art--text a {
-  text-decoration: none;
-  color: grey;
-}
-
-.art--week {
-  margin: 0;
-  margin-top: 0.1rem;
-  font-size: 2.2vw;
-  letter-spacing: 2px;
-  color: royalblue;
-}
-
-.art--title {
-  margin: 0.3rem 0 0 0;
-  font-size: 4.5vw;
-  font-weight: 300;
-  color: #17572c;
-}
-
-.art--cont__img {
-  width: 100%;
-  height: auto;
-  margin: 1rem 0 0 0.3rem;
-  border-radius: 2%;
-}
-
-.more {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0.5rem auto;
-  padding: 0.5rem 1rem;
-  border-radius: 10%;
-  letter-spacing: 3px;
-  font-weight: 900;
-  background: rgb(50, 203, 126);
-  color: white;
-}
-
-.more:hover {
-  background-color: white;
-  color: rgb(50, 203, 126);
-}
-
-.articles--ajax {
-  display: none;
-  margin-bottom: 0.3rem;
-  width: 100%;
-  height: auto;
-}
-
-.aside--title {
-  font-size: 3vw;
-}
-
-.aside--title:hover {
-  color: green;
-}
-
 /* ******************************************************************* HEADERS REDIRECCIONAMIENTO ********************************************** */
 .headers {
   display: -webkit-box;
@@ -1138,8 +1064,8 @@ $breakpoints: (
 .articles--itemgrid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 59%;
-  grid-template-columns: 40% 59%;
+  -ms-grid-columns: 40% 58%;
+  grid-template-columns: 40% 58%;
 }
 
 .art--text {
@@ -1159,12 +1085,6 @@ $breakpoints: (
   color: royalblue;
 }
 
-.art--note {
-  width: 99%;
-  margin-left: 3%;
-  height: 110px;
-}
-
 .art--title {
   margin: 0.3rem 0 0 0;
   font-size: 4.5vw;
@@ -1172,11 +1092,21 @@ $breakpoints: (
   color: #17572c;
 }
 
+.art--cont {
+  width: 150px;
+  height: 100px;
+  margin-top: 1rem;
+  margin-left: 0.3rem;
+  border: thin solid grey;
+  border-radius: 2%;
+}
+
 .art--cont__img {
   width: 100%;
-  height: auto;
-  margin: 1rem 0 0 0.3rem;
+  height: 100px;
   border-radius: 2%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .more {

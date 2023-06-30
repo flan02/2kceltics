@@ -41,16 +41,16 @@
         <section class="articles--itemgrid">
             <?php
                 for($i; $i>=$ii; $i--): ?>
-            <article class="art--note">
+        
                 <div class="art--cont">
                     <a href="<?php echo $root.$articles[$i]; ?>">
                         <img class='art--cont__img' src="<?php echo $article[$i]; ?>" alt="<?php echo $name[$i] ?>" />
                     </a>
                 </div>
-            </article>
+
             <article class=art--text>
-                <h5 class="art--week"> <!-- WEEK # -->
-                    <?php echo /* $w[$i] . ": " .*/ $date[$i]; ?> </h5>
+                <h5 class="art--week"> 
+                    <?php echo $date[$i]; ?> </h5>
                 <a href="<?php  echo $root.$articles[$i]; ?>">
                     <h1 class="art--title"><?php  echo $title[$i]; ?></h1>
                 </a>
@@ -108,8 +108,8 @@
                         </a>
                     </div>
                     <div class=art--text>
-                        <h5 class="art--week"> <!-- WEEK # -->
-                            <?php echo /*$w[$k] . ": " . */$date[$k]; ?> </h5>
+                        <h5 class="art--week"> 
+                            <?php echo $date[$k]; ?> </h5>
                         <a href="<?php echo $root.$articles[$k]; ?>">
                             <h1 class="art--title"><?php echo $title[$k]; ?></h1>
                         </a>
@@ -127,8 +127,8 @@
                             </a>
                         </div>
                         <div class=art--text>
-                            <h5 class="art--week"> <!-- WEEK # -->
-                                <?php echo /* $w[$j] . ": " .*/ $date[$j]; ?> </h5>
+                            <h5 class="art--week"> 
+                                <?php echo $date[$j]; ?> </h5>
                             <a href="<?php echo $root.$articles[$j]; ?>">
                                 <h1 class="art--title"><?php echo $title[$j]; ?></h1>
                             </a>
