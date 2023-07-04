@@ -274,9 +274,9 @@
   font-family: Courier;
   font-weight: 900;
   letter-spacing: 3px;
-  color: whitesmoke;
   border: 1px solid whitesmoke;
-  background-color: teal;
+  color: white;
+  background-color: rgb(23, 87, 44);
 }
 
 .he--nav__btn:hover {
@@ -1636,14 +1636,7 @@ $breakpoints: (
   -ms-grid-column: 3;
 }
 
-.aside--itemgrid {
-  background: -webkit-gradient(linear, left top, left bottom, from(lightyellow), to(lightcyan));
-  background: linear-gradient(lightyellow, lightcyan);
-  border: 1px solid rgba(49, 57, 129, 0.25);
-  border-bottom: none;
-  border-top: none;
-}
-
+/*
 .articles--itemgrid {
   background-color: whitesmoke;
   border: 1px solid rgba(49, 57, 129, 0.25);
@@ -1657,11 +1650,11 @@ $breakpoints: (
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 95%;
   margin-top: 1%;
   margin-left: 5%;
@@ -1671,7 +1664,7 @@ $breakpoints: (
 .art--cont {
   position: relative;
   -ms-flex-preferred-size: 33.84%;
-  flex-basis: 33.84%;
+      flex-basis: 33.84%;
   height: 200px;
   border-radius: 3%;
 }
@@ -1686,7 +1679,7 @@ $breakpoints: (
 .art--text {
   margin-left: 0.5rem;
   -ms-flex-preferred-size: 65%;
-  flex-basis: 65%;
+      flex-basis: 65%;
   height: 200px;
 }
 
@@ -1700,7 +1693,6 @@ $breakpoints: (
   letter-spacing: 2px;
   color: royalblue;
 }
-
 .art--week__date {
   padding-left: 1rem;
   margin-bottom: 1rem;
@@ -1720,16 +1712,16 @@ $breakpoints: (
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .aside--lastart a {
   -ms-flex-item-align: start;
-  align-self: flex-start;
+      align-self: flex-start;
   text-decoration: none;
 }
 
@@ -1741,7 +1733,7 @@ $breakpoints: (
 
 .aside--news {
   -ms-flex-item-align: start;
-  align-self: flex-start;
+      align-self: flex-start;
   font-size: 1.5vw;
   color: grey;
   padding: 0 0.5rem;
@@ -1756,8 +1748,8 @@ $breakpoints: (
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0.5rem auto;
   padding: 0.5rem 1rem;
   border-radius: 10%;
@@ -1766,23 +1758,23 @@ $breakpoints: (
   background: rgb(50, 203, 126);
   color: white;
 }
-
 .more:hover {
   background-color: white;
   color: rgb(50, 203, 126);
 }
-
+*/
 /* ***************************   ARTICLES  ********************************* */
 .ma--articles-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 29% 1% 70%;
-  grid-template-columns: 29% 70%;
+  -ms-grid-columns: 30% 1% 68%;
+  grid-template-columns: 30% 68%;
   -ms-grid-rows: 1fr;
   grid-template-rows: 1fr;
-  padding-top: 0.5rem;
   width: 100%;
+  padding-top: 0.5rem;
   gap: 1%;
+  background-color: whitesmoke;
 }
 .ma--articles-grid > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -1794,11 +1786,55 @@ $breakpoints: (
 }
 
 .aside--itemgrid {
-  background: -webkit-gradient(linear, left top, left bottom, from(lightyellow), to(lightcyan));
-  background: linear-gradient(lightyellow, lightcyan);
+  margin-left: 1%;
+  background-color: whitesmoke;
+  background: url(../../../resources/svg/pattern-brick-wall.svg);
   border: 1px solid rgba(49, 57, 129, 0.25);
   border-bottom: none;
   border-top: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+.aside--lastart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(23, 87, 44)), to(#111));
+  background: linear-gradient(rgb(23, 87, 44), #111);
+}
+
+.aside--lastart a {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-decoration: none;
+}
+
+.aside--title {
+  color: whitesmoke;
+  letter-spacing: 4px;
+  font-size: 2.3vw;
+}
+
+.aside--news {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 0 0.8rem;
+  font-size: 1.5vw;
+  font-family: "Roboto", sans-serif;
+  color: #aaa;
+  text-decoration: underline;
+}
+
+.aside--news:hover {
+  color: rgb(23, 87, 44);
 }
 
 .articles--itemgrid {
@@ -1872,43 +1908,6 @@ $breakpoints: (
   color: rgb(23, 87, 44);
 }
 
-.aside--lastart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.aside--lastart a {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  text-decoration: none;
-}
-
-.aside--title {
-  color: rgb(23, 87, 44);
-  letter-spacing: 3px;
-  font-size: 2.3vw;
-}
-
-.aside--news {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  font-size: 1.7vw;
-  color: grey;
-  padding: 0 0.5rem;
-}
-
-.aside--news:hover {
-  color: rgb(23, 87, 44);
-}
-
 .more {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1931,6 +1930,9 @@ $breakpoints: (
 
 /* ***************************   ARTICLE  ********************************* */
 .disqus--cont__art {
+  width: 100%;
+  margin: auto auto;
+  padding: 1rem;
   background-color: #333;
 }
 
@@ -1973,17 +1975,15 @@ $breakpoints: (
 
 .art--cont__video {
   position: relative;
+  width: 50vw;
+  height: 58vh;
   margin: auto;
-  width: 50%;
-  height: 266px;
   border: 1px solid 128 128 128, 0.5;
-  border-radius: 2%;
 }
 
 .youtube {
   width: 100%;
   height: 100%;
-  border-radius: 2%;
 }
 
 .article--buff {
