@@ -2,6 +2,7 @@
 
 if (isset($data["controller"])) {
     $root = get("/Content", "fullgames");
+    $youtube_500hs = root("resources/img/","youtube_500hs_mobile.png");
     $logo = root("resources/icons/", "celtics-logo-favicon.png");
     $icon_tv = root("resources/img/", "tdgarden.png");
     $spoiler = root("frontend/js/", "spoilers.js");
@@ -80,8 +81,9 @@ if($playoffs == "true"){
 <main>
     <div class="container">
         <h1 class="ma--title"> FULL GAMES </h1>
-        <section class="ma--choosegame">
-                <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
+        <section class="ma--btn__cont">
+               <div class="ma--choosegame">
+               <a class="ma--game" href="<?php echo $root . "/" . $box . $ancla; ?>">
                     <span class="ma--game__span"><?php echo "game " . "#" . $box; ?></span>
                 </a>
                 <a class="ma--game" href="<?php echo $root . "/" . $box1 . $ancla; ?>">
@@ -96,6 +98,10 @@ if($playoffs == "true"){
                 <a class="ma--game" href="<?php echo $root . "/" . $box4 . $ancla; ?>">
                 
                 <span class="ma--game__span"><?php echo "game " . "#" . $box4; ?></span></a>
+               </div>
+               <section class="youtube-500hs">
+                    <img src="<?php echo $youtube_500hs; ?>" alt="youtube500hs">
+                </section>
         </section>
 
         <br>

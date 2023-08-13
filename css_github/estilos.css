@@ -1479,6 +1479,13 @@ $breakpoints: (
   color: royalblue;
 }
 
+.youtube-500hs {
+  width: 55%;
+  height: auto;
+  margin: 1% 0 0 4%;
+  padding: 0;
+}
+
 .ma--container__lineup {
   margin: auto;
   max-width: 1920px;

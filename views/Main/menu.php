@@ -16,17 +16,20 @@ if (isset($data["controller"])) {
     $playoffs = $data["playoffs"];
     $porival = $data["porival"];  
     $gamename = $data["gamename"];
-    $background = "http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/video/film-grain-background.mp4";
+    //$background = "http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/video/film-grain-background.mp4";
     $playoffs_root = $data["playoffs_root"];
 
     for ($p = 0; $p < count($path_2k); $p++) :
         $img_2k[$p] = $path_2k[$p];
     endfor;
 
+    $youtube_500hs = root("resources/img/","youtube_500hs.png");
     $carrousel1 = root("resources/img/carrousel/", "2kceltics2023a.png");
     $carrousel2 = root("resources/img/carrousel/", "2kceltics2023b.png");
     $carrousel3 = root("resources/img/carrousel/", "2kceltics2023c.png");
     $carrousel4 = root("resources/img/carrousel/", "2kceltics2023d.png");
+    $carrousel5 = root("resources/img/carrousel/", "2kceltics2023e.png");
+    $carrousel6 = root("resources/img/carrousel/", "2kceltics2023f.png");
     //resources/icons/x-quit-solid.svg
     $iconQuit = root("resources/icons/", "x-quit-solid.svg");
     //$path = url_base() . "UniServerZ localhost/framework scylla/2kceltics";
@@ -35,7 +38,7 @@ if (isset($data["controller"])) {
     $twitch = "https://player.twitch.tv/js/embed/v1.js";
 
     $local = "<img class='schedule--logo' src='$root_logo/bos.png' alt='team'/>";   // la var $root se definio en el header_welcome
-
+    
     $visita = array();
     for ($i = 0; $i < 82; $i++) :
         $visita[$i] = "<img class='schedule--logo' src='$root_logo/$ochentaydos[$i].png' alt='$ochentaydos[$i]' />";
@@ -43,13 +46,13 @@ if (isset($data["controller"])) {
 
     $root = get("/Dashboard", "menu");
 
-    if ($pag == 2) {
+    if ($pag == 1) {
         $i = 40;
         $k = 60;
         $j = 60;
         $z = 82;
-        $pag = 1;
-        $pag2 = 2;
+        $pag = 2;
+        $pag2 = 1;
     } else {
 
         $i = 0;
@@ -99,6 +102,7 @@ if($playoffs == "false"){
                         <a id="trecord" href="#" class="panel__btn">Record</a>
                     </div>
                 </section>
+              
                 <aside class="ma--aside">
                     <div class="aside--title">
                         <h2>2K23 RECORD</h2>
@@ -117,6 +121,12 @@ if($playoffs == "false"){
                             </div>
                             <div class="slider-slide">
                                 <img src="<?php echo $carrousel4; ?>" alt="photo 4">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="<?php echo $carrousel5; ?>" alt="photo 5">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="<?php echo $carrousel6; ?>" alt="photo 6">
                             </div>
                         </div>
                     </div>
@@ -226,27 +236,29 @@ if($playoffs == "false"){
                 <a id="pstats" href="#" class="panel__btn">player stats</a>
                 <a id="standings" href="#" class="panel__btn">standings</a>
                 <a id="trecord" href="#" class="panel__btn">team record</a>
-            </div>
-           
+            </div>       
     </article>
+    <section class="youtube-500hs">
+        <img src="<?php echo $youtube_500hs; ?>" alt="youtube500hs">
+    </section>  
     <div class="ma--container">
     <?php if($playoffs == "false"){ ?>
         <div class="ma--grid">        
             <div class="ma--schedule__col20">
                 <?php
-                    if ($pag === 2) { // switch 1
+                    if ($pag === 2) { // ? Importante jugar con el valor 1 y 2
                         $i = 40;
                         $j = 60;
                         $z = 60;
                         $k = 82;
-                     //   $pag = 2;
-                        $pag2 = 1; // switch 2
+                        //$pag = 1; // switch 1
+                        $pag2 = 2; // switch 2
                     } else {
                         $i = 0;
                         $j = 20;
                         $z = 20;
                         $k = 40;
-                        $pag = 1; // switch 1
+                        $pag = 2; // switch 1
                         $pag2 = 2; // switch 2
                     }
 
@@ -295,8 +307,8 @@ if($playoffs == "false"){
                     <img class="ma--img__playoffs" src="<?php echo $playoffs_root; ?>" alt="playoffs-picture">
                 </article>
     <?php } ?>
-            
-                <div class="ma--section__news">  
+               
+                <div class="ma--section__news"> 
                     <h2>2K23 RECORD</h2>
                     <p class="ma--record"><?php echo "$win W - $lose L"; ?></p>
                     <div class="slider">
@@ -312,6 +324,12 @@ if($playoffs == "false"){
                             </div>
                             <div class="slider-slide">
                                 <img src="<?php echo $carrousel4 ; ?>" alt="photo 4">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="<?php echo $carrousel5; ?>" alt="photo 5">
+                            </div>
+                            <div class="slider-slide">
+                                <img src="<?php echo $carrousel6; ?>" alt="photo 6">
                             </div>
                         </div>
                     </div>
