@@ -12,14 +12,12 @@ class Content extends Controller
 
     public function fullgames()
     {
-
         $version2k = get_version();
-        //$playoffs = get_season();
-        $playoffs = true;
+        $playoffs = get_season();
+        $porival = get_porival();
+        
         if (isset($_GET["game"])) {
             $game = $_GET["game"];
-            /*echo $game;
-            die(); */
         } else {
             $game = " ";
         }
@@ -37,7 +35,7 @@ class Content extends Controller
         $j = 0;
         $k = 1;
         $z = 0;
-
+        
         foreach ($json as $season82) {
 
             $array_season82[$i] = $season82;
@@ -98,9 +96,10 @@ class Content extends Controller
         }
 
         $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");
-
+        
+        
         $controller = array("Dashboard", "Content");   // controllador p/ la interfaz
-        $_loadViews = new LoadViews("Main/fullgames.php", compact("root_img", "controller", "array_links", "array_bos_points", "array_rival_points", "array_rival_name", "game", "current_game", "r", "f", "css1", "css2", "mobile", "mainmenu", "iconos", "gamename", "playoffs", "playoffs_root"));
+        $_loadViews = new LoadViews("Main/fullgames.php", compact("root_img", "controller", "array_links", "array_bos_points", "array_rival_points", "array_rival_name", "game", "current_game", "r", "f", "css1", "css2", "mobile", "mainmenu", "iconos", "gamename", "playoffs", "playoffs_root", "porival"));
     }
 
     public function roster()

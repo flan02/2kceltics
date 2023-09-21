@@ -340,6 +340,132 @@
       "BOS": "103",
       "MEM": "98",
       "res": "W"
+    },
+    "game58": {
+      "link": "https://www.youtube.com/embed/TN9s9Fbpk6g",
+      "BOS": "93",
+      "MIL": "104",
+      "res": "L"
+    },
+    "game59": {
+      "link": "https://www.youtube.com/embed/MqnjW-ygO8U",
+      "BOS": "109",
+      "DET": "119",
+      "res": "L"
+    },
+    "game60": {
+      "link": "https://www.youtube.com/embed/oRccI2TIyYs",
+      "BOS": "92",
+      "IND": "103",
+      "res": "L"
+    },
+    "game61": {
+      "link": "https://www.youtube.com/embed/eM9YOLKlgjE",
+      "BOS": "111",
+      "PHI": "95",
+      "res": "W"
+    },
+    "game62": {
+      "link": "https://www.youtube.com/embed/sgQtfcjrKRU",
+      "BOS": "102",
+      "NYK": "113",
+      "res": "L"
+    },
+    "game63": {
+      "link": "https://www.youtube.com/embed/3y8PwIAd3rU",
+      "BOS": "116",
+      "CLE": "95",
+      "res": "W"
+    },
+    "game64": {
+      "link": "https://www.youtube.com/embed/GGfi6zVAFF8",
+      "BOS": "93",
+      "BRO": "101",
+      "res": "L"
+    },
+    "game65": {
+      "link": "https://www.youtube.com/embed/HRWKdanFCUY",
+      "BOS": "108",
+      "NYK": "100",
+      "res": "W"
+    },
+    "game66": {
+      "link": "https://www.youtube.com/embed/Jv7ivQiXciM",
+      "BOS": "127",
+      "CLE": "123",
+      "res": "W"
+    },
+    "game67": {
+      "link": "https://www.youtube.com/embed/4SE-yQCn_hU",
+      "BOS": "141",
+      "POR": "106",
+      "res": "W"
+    },
+    "game68": {
+      "link": "https://www.youtube.com/embed/1iTPKTmBHuo",
+      "BOS": "107",
+      "ATL": "113",
+      "res": "L"
+    },
+    "game69": {
+      "link": "https://www.youtube.com/embed/DA8jMdQSwBc",
+      "BOS": "113",
+      "HOU": "108",
+      "res": "W"
+    },
+    "game70": {
+      "link": "https://www.youtube.com/embed/adb8BROuWDc",
+      "BOS": "97",
+      "MIN": "103",
+      "res": "L"
+    },
+    "game71": {
+      "link": "https://www.youtube.com/embed/s9pgdud1ZKc",
+      "BOS": "112",
+      "POR": "83",
+      "res": "W"
+    },
+    "game72": {
+      "link": "https://www.youtube.com/embed/MUwENSdcix0",
+      "BOS": "115",
+      "UTH": "74",
+      "res": "W"
+    },
+    "game73": {
+      "link": "https://www.youtube.com/embed/Lx6h1ZEfSJ8",
+      "BOS": "104",
+      "SAC": "110",
+      "res": "L"
+    },
+    "game74": {
+      "link": "https://www.youtube.com/embed/OuOlQ7q3PfY",
+      "BOS": "102",
+      "IND": "114",
+      "res": "L"
+    },
+    "game75": {
+      "link": "https://www.youtube.com/embed/mkYnaBPKZBc",
+      "BOS": "120",
+      "SAS": "93",
+      "res": "W"
+    },
+    "game76": {
+      "link": "https://www.youtube.com/embed/214FUJIiSUk",
+      "BOS": "123",
+      "WAS": "82",
+      "res": "W"
+    },
+    "game77": {
+      "link": "https://www.youtube.com/embed/9TRcHjCzMwI",
+      "BOS": "113",
+      "MIL": "111",
+      "res": "W"
+    },
+    "game78": {
+      "link": "https://www.youtube.com/embed/TaK8QitRaGg",
+      "BOS": "122",
+      "UTH": "82",
+      "res": "W"
     }
 }
 

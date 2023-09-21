@@ -18,8 +18,8 @@ function develop_mode($mode){
         break;
     endswitch;
 }
-function contadorvisitas($from)
-    {
+
+function contadorvisitas($from){
         $from = $from;
        
     
@@ -42,8 +42,7 @@ function contadorvisitas($from)
             fclose($f);
         }
         return $contadorvisitas;
-    }
-
+}
 // ej:  echo "<script> window.location = '".url_base(). '/UniserverZ%20localhost/framework%20scylla/DATABASKETBALL/index.php?controller=Coach&action=view' . "' </script>";
 function url_base()  // sirve pq p/ trabajar con URL amigables la ruta de los archivos debe ser la ABSOLUTA
 {
@@ -139,7 +138,7 @@ function get_porival(){
 }
 
 function get_season(){
-    $playoffs = "false";       // en temporada regular $playoffs = "false"
+    $playoffs = "true";       //* en temporada regular $playoffs = "false"
     return $playoffs;
 }
 

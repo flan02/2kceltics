@@ -10,7 +10,9 @@ if (isset($data["controller"])) {
     $cross = root("resources/icons/", "x-quit-solid.svg");
     $youtube = root("resources/icons/", "youtube.svg");
     $showgamename = $data["gamename"];
-
+    $playoffs = $data["playoffs"];
+    $porival = $data["porival"];
+    
     if (isset($data["game"])) {
         $nrogame = $data["game"];
         $total = root("resources/img/games/", "$nrogame/gtotal.png");
@@ -19,7 +21,7 @@ if (isset($data["controller"])) {
         $nrogame = " ";
     }
 
-    if(isset($data["playoffs"])) $playoffs = $data["playoffs"];
+   // if(isset($data["playoffs"])) $playoffs = $data["playoffs"];
     
     $current_game = $data["current_game"];
 
@@ -54,7 +56,7 @@ $rival_name = $data["array_rival_name"];
 $ancla = "#display";   // ancla p/ redirigir a los videos
 
 }
-
+/*
 if($playoffs == "true"){
     switch($nrogame):
         case $box: $adjust_game = count($season82)-1;
@@ -74,7 +76,7 @@ if($playoffs == "true"){
     } else {
         $adjust_game = $nrogame - 1;
     };
-
+*/
 ?>
 
 <?php if ($mobile) { ?>
