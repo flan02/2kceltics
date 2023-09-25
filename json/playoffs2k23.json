@@ -1,143 +1,34 @@
 {
-    "R1G1": {
-      "link": "https://www.youtube.com/embed/TxWqW0RxNeg",
-      "BOS": "102",
-      "BRO": "121",
-      "res": "L"
-    },
-    "R1G2": {
-      "link": "https://www.youtube.com/embed/j9Vl-GuX9Yk",
-      "BOS": "111",
-      "BRO": "114",
-      "res": "L"
-    },
-    "R1G3": {
-      "link": "https://www.youtube.com/embed/a0NFKnaBpFk",
-      "BOS": "124",
-      "BRO": "115",
-      "res": "W"
-    },
-    "R1G4": {
-      "link": "https://www.youtube.com/embed/6XTtvrp544k",
-      "BOS": "114",
-      "BRO": "105",
-      "res": "W"
-    },
-    "R1G5": {
-      "link": "https://www.youtube.com/embed/WqbwE7CrWks",
-      "BOS": "106",
-      "BRO": "97",
-      "res": "W"
-    },
-    "R1G6": {
-      "link": "https://www.youtube.com/embed/lyvI5cxzxJM",
-      "BOS": "106",
-      "BRO": "91",
-      "res": "W"
-    },
-    "R2G1": {
-      "link": "https://www.youtube.com/embed/TxWqW0RxNeg",
-      "BOS": "102",
-      "BRO": "121",
-      "res": "L"
-    },
-    "R2G2": {
-      "link": "https://www.youtube.com/embed/j9Vl-GuX9Yk",
-      "BOS": "111",
-      "BRO": "114",
-      "res": "W"
-    },
-    "R2G3": {
-      "link": "https://www.youtube.com/embed/a0NFKnaBpFk",
-      "BOS": "124",
-      "BRO": "115",
-      "res": "W"
-    },
-    "R2G4": {
-      "link": "https://www.youtube.com/embed/6XTtvrp544k",
-      "BOS": "114",
-      "BRO": "105",
-      "res": "W"
-    },
-    "R2G5": {
-      "link": "https://www.youtube.com/embed/WqbwE7CrWks",
-      "BOS": "106",
-      "BRO": "97",
-      "res": "W"
-    },
-    "R3G1": {
-      "link": "https://www.youtube.com/embed/sCZZxv8HyBA",
-      "BOS": "115",
-      "MIA": "105",
-      "res": "W"
-    },
-    "R3G2": {
-      "link": "https://www.youtube.com/embed/PQFHSHrX_lg",
-      "BOS": "89",
-      "MIA": "116",
-      "res": "L"
-    },
-    "R3G3": {
-      "link": "https://www.youtube.com/embed/8cu-J_kngVY",
-      "BOS": "106",
-      "MIA": "107",
-      "res": "L"
-    },
-    "R3G4": {
-      "link": "https://www.youtube.com/embed/VAcLc5qJCCw",
-      "BOS": "99",
-      "MIA": "96",
-      "res": "W"
-    },
-    "R3G5": {
-      "link": "https://www.youtube.com/embed/a8ytSvNkHgQ",
-      "BOS": "90",
-      "MIA": "106",
-      "res": "L"
-    },
-    "R3G6": {
-      "link": "https://www.youtube.com/embed/1N9SScF4rHo",
-      "BOS": "121",
-      "MIA": "92",
-      "res": "W"
-    },
-    "R3G7": {
-      "link": "https://www.youtube.com/embed/qt6_hXBUqqc",
-      "BOS": "98",
-      "MIA": "95",
-      "res": "W"
-    },
-    "R4G1": {
-      "link": "https://www.youtube.com/embed/zLSyzj8sXTw",
-      "BOS": "105",
-      "GSW": "110",
-      "res": "L"
-    },
-    "R4G2": {
-      "link": "https://www.youtube.com/embed/_QkoP2R_mpw",
-      "BOS": "108",
-      "GSW": "111",
-      "res": "L"
-    },
-    "R4G3": {
-      "link": "https://www.youtube.com/embed/4WtuH3jrvAA",
-      "BOS": "95",
-      "GSW": "114",
-      "res": "L"
-    },
-    "R4G4": {
-      "link": "https://www.youtube.com/embed/5ZtQPyEk-tA",
-      "BOS": "113",
-      "GSW": "105",
-      "res": "W"
-    },
-    "R4G5": {
-      "link": "https://www.youtube.com/embed/9NvnZi0WzXg",
-      "BOS": "109",
-      "GSW": "121",
-      "res": "L"
-    }
-
+  "R1G1": {
+    "link": "https://www.youtube.com/embed/TxWqW0RxAbc",
+    "BOS": "104",
+    "ATL": "121",
+    "res": "L"
+  },
+  "R1G2": {
+    "link": "https://www.youtube.com/embed/TxWqW0Rxvcx",
+    "BOS": "114",
+    "ATL": "122",
+    "res": "L"
+  },
+  "R1G3": {
+    "link": "https://www.youtube.com/embed/TxWqW0Rxgre",
+    "BOS": "101",
+    "ATL": "106",
+    "res": "L"
+  },
+  "R1G4": {
+    "link": "https://www.youtube.com/embed/TxWqW0Rxsge",
+    "BOS": "111",
+    "ATL": "119",
+    "res": "L"
+  },
+  "R1G5": {
+    "link": "https://www.youtube.com/embed/TxWqW0Rxlnq",
+    "BOS": "109",
+    "ATL": "103",
+    "res": "W"
+  }
 }
 
 

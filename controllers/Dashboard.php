@@ -188,12 +188,14 @@ class Dashboard extends Controller
             $json_season82 = file_get_contents("json/fullgames2k23.json");
             $json = json_decode($json_season82, true);
         }else{
-             $json_season82 = file_get_contents("json/playoffs2k22.json");
-             $json = json_decode($json_season82, true);
+             $json_playoffs = file_get_contents("json/playoffs2k23.json");
+             $json = json_decode($json_playoffs, true);
         }
 
         $current_game = count($json);
         $current_game = $current_game +1;
+        $playoffsGame = count($json) - 1; //* subsana diferencias entre temporada regular y playoffs 
+        
         $i=0;
         $j=0;
        
@@ -211,7 +213,7 @@ class Dashboard extends Controller
                 }
             }
         }
-
+        
         $from = "dashboard";
         $cont = contadorvisitas($from);
         
@@ -244,7 +246,7 @@ class Dashboard extends Controller
             $gamename[$z] = $cla;
             $z++;
         endforeach;
-
+        $gamePO = $gamename;
         rsort($gamename);
 
                 // ruta local o servidor para las imagenes
@@ -259,7 +261,7 @@ class Dashboard extends Controller
                     $path_trecord = url_base() . "UniServerZ localhost/framework scylla/".$version2k."/resources/img/games/trecord.png";
                     $path_standings = url_base() . "UniServerZ localhost/framework scylla/".$version2k."/resources/img/games/standings.png";
                     $path_2kimg = [$path_pstats, $path_trecord, $path_standings];
-                    if($playoffs == "true") $playoffs_root = url_base() . "UniServerZ localhost/framework scylla/".$version2k."/resources/img/games/" . $gamename[0] . "/playoffs_picture.png";
+                    if($playoffs == "true") $playoffs_root = url_base() . "UniServerZ localhost/framework scylla/".$version2k."/resources/img/games/" . $gamePO[$playoffsGame] . "/playoffs_picture.png";
                 }else{
                     $root_img = "https://www.2kceltics.xyz/resources/img";
                     $root_logo = "https://www.2kceltics.xyz/resources/nbateamslogo";
@@ -267,8 +269,9 @@ class Dashboard extends Controller
                     $path_trecord = "https://www.2kceltics.xyz/resources/img/games/trecord.png";
                     $path_standings = "https://www.2kceltics.xyz/resources/img/games/standings.png";
                     $path_2kimg = [$path_pstats, $path_trecord, $path_standings];
-                    if($playoffs == "true") $playoffs_root = url_base() . "/resources/img/games/" . $gamename[0] . "/playoffs_picture.png";
+                    if($playoffs == "true") $playoffs_root = url_base() . "/resources/img/games/" . $gamePO[$playoffsGame] . "/playoffs_picture.png";
                 }
+        
         
         $mainmenu = true;  // para que muestre el desplegable en la version mobile
         $iconos = array("2kceltics_favicon32x32.png", "x-quit-solid.svg", "gift.svg", "user-solid.svg", "linkedin.svg", "twitch.svg", "address-card.svg", "paypal.svg", "exclamation-triangle-solid.svg", "menu-bars.svg", "arrow-down.svg");

@@ -12,13 +12,18 @@ if (isset($data["controller"])) {
     $ochentaydos = $data["ochentaydos"];
     $localia = $data["localia"];
     $root_logo = $data["root_logo"];
+    
     $path_2k = $data["path_2kimg"];
+    
     $playoffs = $data["playoffs"];
-    $porival = $data["porival"];  
+    
     $gamename = $data["gamename"];
+    
     //$background = "http://localhost/UniServerZ localhost/framework scylla/2kceltics_0-6-9-041522/resources/video/film-grain-background.mp4";
+    $porival = $data["porival"]; 
+    $rivalPlayoffs = "<img class='schedule--logo' src='$root_logo/$porival.png' alt='$porival' />";
     $playoffs_root = $data["playoffs_root"];
-
+    
     for ($p = 0; $p < count($path_2k); $p++) :
         $img_2k[$p] = $path_2k[$p];
     endfor;
@@ -225,12 +230,21 @@ if($playoffs == "false"){
     <article class="ma--nextGame">
             <div class="ma--nextGame__title">
             <div id="twitch"></div>
-                <h3>NEXT GAME #<?php echo $next_game; ?></h3>
+                <h3>NEXT GAME #<?php if($playoffs == "false") {
+                    echo $next_game; 
+                  }else {
+                    echo $next_game;
+                  }  ?></h3>
             </div>
             <div class="ma--nextGame__logos">
                 <?php echo $local; ?>
                 <span>VS</span>
-                <?php echo $visita[$current_game]; ?>
+                <?php if($playoffs == "false"){ 
+                echo $visita[$current_game]; 
+                }else {
+                echo $rivalPlayoffs;
+                }
+                ?>
             </div>
             <div class="ma--nextGame__links">
                 <a id="pstats" href="#" class="panel__btn">player stats</a>
@@ -308,9 +322,12 @@ if($playoffs == "false"){
                 </article>
     <?php } ?>
                
-                <div class="ma--section__news"> 
-                    <h2>2K23 RECORD</h2>
-                    <p class="ma--record"><?php echo "$win W - $lose L"; ?></p>
+                <div class=<?php 
+                if($playoffs == "false") echo "ma--section__news"; 
+                else echo "ma--sectionPO__news"
+                ?>> 
+                    <h2 class="ma--section__subtitle">2K23 RECORD</h2>
+                    <p class="ma--section__p ma--record"><?php echo "$win W - $lose L"; ?></p>
                     <div class="slider">
                         <div class="slider-slides">
                             <div class="slider-slide active">

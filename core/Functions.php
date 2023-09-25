@@ -133,7 +133,7 @@ function get_version(){
 }
 
 function get_porival(){
-    $porival = "gsw";
+    $porival = "atl";
     return $porival;
 }
 
